@@ -1,0 +1,35 @@
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\project\project\obj\Debug\net8.0\project.csproj.AssemblyReference.cache
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\project\project\obj\Debug\net8.0\project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\project\project\obj\Debug\net8.0\project.AssemblyInfoInputs.cache
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\project\project\obj\Debug\net8.0\project.AssemblyInfo.cs
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\project\project\obj\Debug\net8.0\project.csproj.CoreCompileInputs.cache
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\project\project\bin\Debug\net8.0\project.exe
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\project\project\bin\Debug\net8.0\project.deps.json
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\project\project\bin\Debug\net8.0\project.runtimeconfig.json
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\project\project\bin\Debug\net8.0\project.dll
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\project\project\bin\Debug\net8.0\project.pdb
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\project\project\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\project\project\obj\Debug\net8.0\project.csproj.Up2Date
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\project\project\obj\Debug\net8.0\project.dll
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\project\project\obj\Debug\net8.0\refint\project.dll
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\project\project\obj\Debug\net8.0\project.pdb
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\project\project\obj\Debug\net8.0\project.genruntimeconfig.cache
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\project\project\obj\Debug\net8.0\ref\project.dll
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\Movie Recommendation System Ai Task Specification\project\bin\Debug\net8.0\project.exe
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\Movie Recommendation System Ai Task Specification\project\bin\Debug\net8.0\project.deps.json
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\Movie Recommendation System Ai Task Specification\project\bin\Debug\net8.0\project.runtimeconfig.json
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\Movie Recommendation System Ai Task Specification\project\bin\Debug\net8.0\project.dll
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\Movie Recommendation System Ai Task Specification\project\bin\Debug\net8.0\project.pdb
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\Movie Recommendation System Ai Task Specification\project\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\project.csproj.AssemblyReference.cache
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\project.AssemblyInfoInputs.cache
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\project.AssemblyInfo.cs
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\project.csproj.CoreCompileInputs.cache
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\project.sourcelink.json
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\project.csproj.Up2Date
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\project.dll
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\refint\project.dll
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\project.pdb
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\project.genruntimeconfig.cache
+C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\ref\project.dll
