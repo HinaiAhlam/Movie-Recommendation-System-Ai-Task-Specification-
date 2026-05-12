@@ -176,25 +176,28 @@ namespace project
                         Console.Clear();
 
                         Console.Write("Enter movie title: ");
-
                         string title = Console.ReadLine() ?? "";
 
-                        var foundMovie = movieService.SearchByTitle(title);
+                        var foundMovies = movieService.SearchByTitle(title);
 
                         Console.WriteLine();
 
-                        if (foundMovie != null)
+                        if (foundMovies.Count > 0)
                         {
                             Console.ForegroundColor = ConsoleColor.Green;
-                            Console.WriteLine("Movie Found!\n");
+                            Console.WriteLine("Movies Found!\n");
                             Console.ResetColor();
 
-                            Console.WriteLine($"Title: {foundMovie.Title}");
-                            Console.WriteLine($"Genre: {foundMovie.Genre}");
-                            Console.WriteLine($"Year: {foundMovie.ReleaseYear}");
-                            Console.WriteLine($"Director: {foundMovie.Director}");
-                            Console.WriteLine($"Rating: {foundMovie.Rating}");
-                            Console.WriteLine($"Description: {foundMovie.Description}");
+                            foreach (var movie in foundMovies)
+                            {
+                                Console.WriteLine($"Title: {movie.Title}");
+                                Console.WriteLine($"Genre: {movie.Genre}");
+                                Console.WriteLine($"Year: {movie.ReleaseYear}");
+                                Console.WriteLine($"Director: {movie.Director}");
+                                Console.WriteLine($"Rating: {movie.Rating}");
+                                Console.WriteLine($"Description: {movie.Description}");
+                                Console.WriteLine("--------------------------------");
+                            }
                         }
                         else
                         {
