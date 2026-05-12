@@ -33,3 +33,22 @@ C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task S
 C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\project.pdb
 C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\project.genruntimeconfig.cache
 C:\Users\dreea\OneDrive\المستندات\Movie Recommendation System Ai Task Specification (1)\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\ref\project.dll
+C:\Users\fathi\OneDrive\Documents\Movie-Recommendation-System-Ai-Task-Specification-\Movie Recommendation System Ai Task Specification\project\bin\Debug\net8.0\project.exe
+C:\Users\fathi\OneDrive\Documents\Movie-Recommendation-System-Ai-Task-Specification-\Movie Recommendation System Ai Task Specification\project\bin\Debug\net8.0\project.deps.json
+C:\Users\fathi\OneDrive\Documents\Movie-Recommendation-System-Ai-Task-Specification-\Movie Recommendation System Ai Task Specification\project\bin\Debug\net8.0\project.runtimeconfig.json
+C:\Users\fathi\OneDrive\Documents\Movie-Recommendation-System-Ai-Task-Specification-\Movie Recommendation System Ai Task Specification\project\bin\Debug\net8.0\project.dll
+C:\Users\fathi\OneDrive\Documents\Movie-Recommendation-System-Ai-Task-Specification-\Movie Recommendation System Ai Task Specification\project\bin\Debug\net8.0\project.pdb
+C:\Users\fathi\OneDrive\Documents\Movie-Recommendation-System-Ai-Task-Specification-\Movie Recommendation System Ai Task Specification\project\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\fathi\OneDrive\Documents\Movie-Recommendation-System-Ai-Task-Specification-\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\project.csproj.AssemblyReference.cache
+C:\Users\fathi\OneDrive\Documents\Movie-Recommendation-System-Ai-Task-Specification-\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fathi\OneDrive\Documents\Movie-Recommendation-System-Ai-Task-Specification-\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\project.AssemblyInfoInputs.cache
+C:\Users\fathi\OneDrive\Documents\Movie-Recommendation-System-Ai-Task-Specification-\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\project.AssemblyInfo.cs
+C:\Users\fathi\OneDrive\Documents\Movie-Recommendation-System-Ai-Task-Specification-\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\project.csproj.CoreCompileInputs.cache
+C:\Users\fathi\OneDrive\Documents\Movie-Recommendation-System-Ai-Task-Specification-\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\project.sourcelink.json
+C:\Users\fathi\OneDrive\Documents\Movie-Recommendation-System-Ai-Task-Specification-\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\project.csproj.Up2Date
+C:\Users\fathi\OneDrive\Documents\Movie-Recommendation-System-Ai-Task-Specification-\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\project.dll
+C:\Users\fathi\OneDrive\Documents\Movie-Recommendation-System-Ai-Task-Specification-\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\refint\project.dll
+C:\Users\fathi\OneDrive\Documents\Movie-Recommendation-System-Ai-Task-Specification-\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\project.pdb
+C:\Users\fathi\OneDrive\Documents\Movie-Recommendation-System-Ai-Task-Specification-\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\project.genruntimeconfig.cache
+C:\Users\fathi\OneDrive\Documents\Movie-Recommendation-System-Ai-Task-Specification-\Movie Recommendation System Ai Task Specification\project\obj\Debug\net8.0\ref\project.dll
+C:\Users\fathi\OneDrive\Documents\Movie-Recommendation-System-Ai-Task-Specification-\Movie Recommendation System Ai Task Specification\project\bin\Debug\net8.0\Data\movies.json

@@ -1,77 +1,103 @@
 ﻿using project.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace project.Services
 {
     public class MovieService
     {
         private List<Movie> movies = new List<Movie>();
+        private readonly string filePath;
 
-        private string filePath = "Data/movies.json";
+        public MovieService()
+        {
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            filePath = Path.Combine(baseDirectory, "Data", "movies.json");
 
-        // تحميل الأفلام من الملف
+            LoadMovies();
+        }
+
         public void LoadMovies()
         {
-            if (!File.Exists(filePath))
+            try
             {
-                movies = new List<Movie>();
-                return;
-            }
+                if (!File.Exists(filePath))
+                {
+                    Directory.CreateDirectory(Path.GetDirectoryName(filePath)!);
+                    movies = new List<Movie>();
+                    return;
+                }
 
-            string json = File.ReadAllText(filePath);
-            movies = JsonSerializer.Deserialize<List<Movie>>(json);
+                string json = File.ReadAllText(filePath);
+
+                if (string.IsNullOrWhiteSpace(json))
+                {
+                    movies = new List<Movie>();
+                    return;
+                }
+
+                movies = JsonSerializer.Deserialize<List<Movie>>(json,
+                    new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    }) ?? new List<Movie>();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error Loading Movies: " + ex.Message);
+                movies = new List<Movie>();
+            }
         }
 
-        // حفظ الأفلام
         public void SaveMovies()
         {
-            string json = JsonSerializer.Serialize(movies, new JsonSerializerOptions
+            try
             {
-                WriteIndented = true
-            });
+                string json = JsonSerializer.Serialize(movies, new JsonSerializerOptions
+                {
+                    WriteIndented = true
+                });
 
-            File.WriteAllText(filePath, json);
+                File.WriteAllText(filePath, json);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error Saving Movies: " + ex.Message);
+            }
         }
 
-        // عرض كل الأفلام
-        public List<Movie> GetAllMovies()
-        {
-            return movies;
-        }
+        public List<Movie> GetAllMovies() => movies;
 
-        // إضافة فيلم جديد
         public void AddMovie(Movie movie)
         {
-            movie.Id = movies.Count + 1;
+            movie.Id = movies.Any() ? movies.Max(m => m.Id) + 1 : 1;
             movies.Add(movie);
             SaveMovies();
         }
 
-        // البحث بالاسم
-        public Movie SearchByTitle(string title)
+        // ✅ مهم: البحث يرجّع قائمة
+        public List<Movie> SearchByTitle(string title)
         {
-            return movies.FirstOrDefault(m => m.Title.ToLower().Contains(title.ToLower()));
+            return movies
+                .Where(m => m.Title != null &&
+                            m.Title.Contains(title, StringComparison.OrdinalIgnoreCase))
+                .ToList();
         }
 
-        // فلترة حسب النوع
         public List<Movie> GetByGenre(string genre)
         {
             return movies
-                .Where(m => m.Genre.ToLower() == genre.ToLower())
+                .Where(m => m.Genre != null &&
+                            m.Genre.Equals(genre, StringComparison.OrdinalIgnoreCase))
                 .ToList();
         }
 
-        // فلترة حسب السنة
         public List<Movie> GetByYear(int year)
         {
-            return movies
-                .Where(m => m.ReleaseYear == year)
-                .ToList();
+            return movies.Where(m => m.ReleaseYear == year).ToList();
         }
     }
 }
