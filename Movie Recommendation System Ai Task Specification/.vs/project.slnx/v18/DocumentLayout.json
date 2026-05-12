@@ -1,21 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\fathi\\OneDrive\\Documents\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\",
+  "WorkspaceRootPath": "C:\\Users\\mozam\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\fathi\\onedrive\\documents\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\data\\movies.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\data\\movies.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\fathi\\onedrive\\documents\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\mozam\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\fathi\\onedrive\\documents\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\mozam\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\services\\searchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\services\\searchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\mozam\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\fathi\\onedrive\\documents\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\mozam\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\interface\\isearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\interface\\isearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\mozam\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\data\\movies.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\data\\movies.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\mozam\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,75 +38,94 @@
           "Children": [
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             }
           ]
         },
         {
           "DockedWidth": 570,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "ISearch.cs",
+              "DocumentMoniker": "C:\\Users\\mozam\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Interface\\ISearch.cs",
+              "RelativeDocumentMoniker": "project\\Interface\\ISearch.cs",
+              "ToolTip": "C:\\Users\\mozam\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Interface\\ISearch.cs",
+              "RelativeToolTip": "project\\Interface\\ISearch.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T12:20:12.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SearchService.cs",
+              "DocumentMoniker": "C:\\Users\\mozam\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\SearchService.cs",
+              "RelativeDocumentMoniker": "project\\Services\\SearchService.cs",
+              "ToolTip": "C:\\Users\\mozam\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\SearchService.cs",
+              "RelativeToolTip": "project\\Services\\SearchService.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAADwv1MAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T12:18:39.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "movies.json",
-              "DocumentMoniker": "C:\\Users\\fathi\\OneDrive\\Documents\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Data\\movies.json",
+              "DocumentMoniker": "C:\\Users\\mozam\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Data\\movies.json",
               "RelativeDocumentMoniker": "project\\Data\\movies.json",
-              "ToolTip": "C:\\Users\\fathi\\OneDrive\\Documents\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Data\\movies.json",
+              "ToolTip": "C:\\Users\\mozam\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Data\\movies.json",
               "RelativeToolTip": "project\\Data\\movies.json",
-              "ViewState": "AgIAABkAAAAAAAAAAAAIwCIAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAIwCIAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-05-12T11:05:38.602Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\fathi\\OneDrive\\Documents\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\mozam\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Program.cs",
               "RelativeDocumentMoniker": "project\\Program.cs",
-              "ToolTip": "C:\\Users\\fathi\\OneDrive\\Documents\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Program.cs",
+              "ToolTip": "C:\\Users\\mozam\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Program.cs",
               "RelativeToolTip": "project\\Program.cs",
-              "ViewState": "AgIAAI8AAAAAAAAAAAAYwJoAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-12T10:43:58.842Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "MovieService.cs",
-              "DocumentMoniker": "C:\\Users\\fathi\\OneDrive\\Documents\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\MovieService.cs",
+              "DocumentMoniker": "C:\\Users\\mozam\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\MovieService.cs",
               "RelativeDocumentMoniker": "project\\Services\\MovieService.cs",
-              "ToolTip": "C:\\Users\\fathi\\OneDrive\\Documents\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\MovieService.cs",
+              "ToolTip": "C:\\Users\\mozam\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\MovieService.cs",
               "RelativeToolTip": "project\\Services\\MovieService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T10:42:52.015Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T10:42:52.015Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Movie.cs",
-              "DocumentMoniker": "C:\\Users\\fathi\\OneDrive\\Documents\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Models\\Movie.cs",
+              "DocumentMoniker": "C:\\Users\\mozam\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Models\\Movie.cs",
               "RelativeDocumentMoniker": "project\\Models\\Movie.cs",
-              "ToolTip": "C:\\Users\\fathi\\OneDrive\\Documents\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Models\\Movie.cs",
+              "ToolTip": "C:\\Users\\mozam\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Models\\Movie.cs",
               "RelativeToolTip": "project\\Models\\Movie.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-12T10:41:57.386Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 332,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
