@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fathi\\OneDrive\\Documents\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\project.csproj": {}
+    "C:\\Users\\mozam\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fathi\\OneDrive\\Documents\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\project.csproj": {
+    "C:\\Users\\mozam\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fathi\\OneDrive\\Documents\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\project.csproj",
+        "projectUniqueName": "C:\\Users\\mozam\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\project.csproj",
         "projectName": "project",
-        "projectPath": "C:\\Users\\fathi\\OneDrive\\Documents\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\project.csproj",
-        "packagesPath": "C:\\Users\\fathi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fathi\\OneDrive\\Documents\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\obj\\",
+        "projectPath": "C:\\Users\\mozam\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\project.csproj",
+        "packagesPath": "C:\\Users\\mozam\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mozam\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\fathi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mozam\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
