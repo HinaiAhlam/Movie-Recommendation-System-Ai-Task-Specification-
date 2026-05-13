@@ -60,8 +60,7 @@
               "RelativeToolTip": "project\\Interface\\ISearch.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T12:20:12.256Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T12:20:12.256Z"
             },
             {
               "$type": "Document",
@@ -73,8 +72,7 @@
               "RelativeToolTip": "project\\Services\\SearchService.cs",
               "ViewState": "AgIAAEkAAAAAAAAAAADwv1MAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T12:18:39.446Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T12:18:39.446Z"
             },
             {
               "$type": "Document",
@@ -86,8 +84,7 @@
               "RelativeToolTip": "project\\Data\\movies.json",
               "ViewState": "AgIAAA0AAAAAAAAAAAAIwCIAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-12T11:05:38.602Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T11:05:38.602Z"
             },
             {
               "$type": "Document",
@@ -97,7 +94,7 @@
               "RelativeDocumentMoniker": "project\\Program.cs",
               "ToolTip": "C:\\Users\\mozam\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Program.cs",
               "RelativeToolTip": "project\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-12T10:43:58.842Z",
               "EditorCaption": ""
@@ -124,8 +121,7 @@
               "RelativeToolTip": "project\\Models\\Movie.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T10:41:57.386Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T10:41:57.386Z"
             }
           ]
         }
