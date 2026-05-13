@@ -9,9 +9,10 @@ namespace project.Services
 {
     public class AuthenticationService
     {
-        private readonly string _filePath = "Data/users.json"; // مسار قاعدة البيانات
+        // تم تعديل الامتداد ليتوافق مع الصورة المرفقة image_57d218.png
+        private readonly string _filePath = "Data/users.josn";
         private List<User> _users;
-        public User? CurrentUser { get; private set; } // إدارة المستخدم الحالي
+        public User? CurrentUser { get; private set; }
 
         public AuthenticationService()
         {
@@ -32,13 +33,25 @@ namespace project.Services
                 var json = File.ReadAllText(_filePath);
                 _users = JsonConvert.DeserializeObject<List<User>>(json) ?? new List<User>();
             }
-            catch { _users = new List<User>(); }
+            catch
+            {
+                _users = new List<User>();
+            }
         }
 
-        private void SaveUsers()
+        // تم تغييرها إلى public لكي تستطيع استدعاءها من Program.cs أو أي Service أخرى
+        public void SaveUsers()
         {
-            var json = JsonConvert.SerializeObject(_users, Formatting.Indented);
-            File.WriteAllText(_filePath, json);
+            try
+            {
+                var json = JsonConvert.SerializeObject(_users, Formatting.Indented);
+                File.WriteAllText(_filePath, json);
+            }
+            catch (Exception ex)
+            {
+                // طباعة الخطأ في حال فشل الحفظ (مثلاً الملف مفتوح في برنامج آخر)
+                Console.WriteLine($"Error saving to users.josn: {ex.Message}");
+            }
         }
 
         public bool Register(string username, string password)
@@ -47,9 +60,12 @@ namespace project.Services
                 return false;
 
             int newId = _users.Count > 0 ? _users.Max(u => u.Id) + 1 : 1;
+
+            // عند إنشاء مستخدم جديد، يتم تهيئة القوائم الفارغة تلقائياً
             var newUser = new User(newId, username, password);
             _users.Add(newUser);
-            SaveUsers();
+
+            SaveUsers(); // حفظ المستخدم الجديد في الملف
             return true;
         }
 
@@ -64,7 +80,6 @@ namespace project.Services
             return false;
         }
 
-        // هذه هي الدالة التي كانت تنقصك وتسببت في الخطأ
         public void Logout()
         {
             CurrentUser = null;
