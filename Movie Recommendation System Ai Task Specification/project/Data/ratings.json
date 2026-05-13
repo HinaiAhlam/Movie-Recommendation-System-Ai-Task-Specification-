@@ -1,1 +1,602 @@
-[]
+[
+  {
+    "Username": "ahmed",
+    "MovieId": 1,
+    "Score": 5,
+    "RatedAt": "2026-05-13T10:00:00"
+  },
+  {
+    "Username": "ahmed",
+    "MovieId": 2,
+    "Score": 4,
+    "RatedAt": "2026-05-13T10:05:00"
+  },
+  {
+    "Username": "ali",
+    "MovieId": 1,
+    "Score": 5,
+    "RatedAt": "2026-05-13T11:00:00"
+  },
+  {
+    "Username": "ali",
+    "MovieId": 3,
+    "Score": 3,
+    "RatedAt": "2026-05-13T11:10:00"
+  },
+  {
+    "Username": "sara",
+    "MovieId": 2,
+    "Score": 5,
+    "RatedAt": "2026-05-13T12:00:00"
+  },
+  {
+    "Username": "ahmed",
+    "MovieId": 6,
+    "Score": 5,
+    "RatedAt": "2026-05-13T12:05:00"
+  },
+  {
+    "Username": "ahmed",
+    "MovieId": 10,
+    "Score": 4,
+    "RatedAt": "2026-05-13T12:10:00"
+  },
+  {
+    "Username": "ahmed",
+    "MovieId": 23,
+    "Score": 5,
+    "RatedAt": "2026-05-13T12:15:00"
+  },
+  {
+    "Username": "ali",
+    "MovieId": 2,
+    "Score": 4,
+    "RatedAt": "2026-05-13T12:20:00"
+  },
+  {
+    "Username": "ali",
+    "MovieId": 7,
+    "Score": 5,
+    "RatedAt": "2026-05-13T12:25:00"
+  },
+  {
+    "Username": "ali",
+    "MovieId": 14,
+    "Score": 4,
+    "RatedAt": "2026-05-13T12:30:00"
+  },
+  {
+    "Username": "sara",
+    "MovieId": 5,
+    "Score": 5,
+    "RatedAt": "2026-05-13T12:35:00"
+  },
+  {
+    "Username": "sara",
+    "MovieId": 13,
+    "Score": 4,
+    "RatedAt": "2026-05-13T12:40:00"
+  },
+  {
+    "Username": "sara",
+    "MovieId": 18,
+    "Score": 5,
+    "RatedAt": "2026-05-13T12:45:00"
+  },
+  {
+    "Username": "nora",
+    "MovieId": 1,
+    "Score": 5,
+    "RatedAt": "2026-05-13T12:50:00"
+  },
+  {
+    "Username": "nora",
+    "MovieId": 9,
+    "Score": 4,
+    "RatedAt": "2026-05-13T12:55:00"
+  },
+  {
+    "Username": "nora",
+    "MovieId": 15,
+    "Score": 5,
+    "RatedAt": "2026-05-13T13:00:00"
+  },
+  {
+    "Username": "nora",
+    "MovieId": 24,
+    "Score": 3,
+    "RatedAt": "2026-05-13T13:05:00"
+  },
+  {
+    "Username": "omar",
+    "MovieId": 3,
+    "Score": 5,
+    "RatedAt": "2026-05-13T13:10:00"
+  },
+  {
+    "Username": "omar",
+    "MovieId": 17,
+    "Score": 4,
+    "RatedAt": "2026-05-13T13:15:00"
+  },
+  {
+    "Username": "omar",
+    "MovieId": 25,
+    "Score": 5,
+    "RatedAt": "2026-05-13T13:20:00"
+  },
+  {
+    "Username": "fatima",
+    "MovieId": 4,
+    "Score": 4,
+    "RatedAt": "2026-05-13T13:25:00"
+  },
+  {
+    "Username": "fatima",
+    "MovieId": 15,
+    "Score": 5,
+    "RatedAt": "2026-05-13T13:30:00"
+  },
+  {
+    "Username": "fatima",
+    "MovieId": 34,
+    "Score": 4,
+    "RatedAt": "2026-05-13T13:35:00"
+  },
+  {
+    "Username": "khalid",
+    "MovieId": 2,
+    "Score": 3,
+    "RatedAt": "2026-05-13T13:40:00"
+  },
+  {
+    "Username": "khalid",
+    "MovieId": 6,
+    "Score": 4,
+    "RatedAt": "2026-05-13T13:45:00"
+  },
+  {
+    "Username": "khalid",
+    "MovieId": 21,
+    "Score": 5,
+    "RatedAt": "2026-05-13T13:50:00"
+  },
+  {
+    "Username": "laila",
+    "MovieId": 8,
+    "Score": 5,
+    "RatedAt": "2026-05-13T13:55:00"
+  },
+  {
+    "Username": "laila",
+    "MovieId": 12,
+    "Score": 5,
+    "RatedAt": "2026-05-13T14:00:00"
+  },
+  {
+    "Username": "laila",
+    "MovieId": 29,
+    "Score": 4,
+    "RatedAt": "2026-05-13T14:05:00"
+  },
+  {
+    "Username": "zain",
+    "MovieId": 11,
+    "Score": 5,
+    "RatedAt": "2026-05-13T14:10:00"
+  },
+  {
+    "Username": "zain",
+    "MovieId": 19,
+    "Score": 4,
+    "RatedAt": "2026-05-13T14:15:00"
+  },
+  {
+    "Username": "zain",
+    "MovieId": 36,
+    "Score": 5,
+    "RatedAt": "2026-05-13T14:20:00"
+  },
+  {
+    "Username": "huda",
+    "MovieId": 5,
+    "Score": 4,
+    "RatedAt": "2026-05-13T14:25:00"
+  },
+  {
+    "Username": "huda",
+    "MovieId": 41,
+    "Score": 5,
+    "RatedAt": "2026-05-13T14:30:00"
+  },
+  {
+    "Username": "huda",
+    "MovieId": 42,
+    "Score": 4,
+    "RatedAt": "2026-05-13T14:35:00"
+  },
+  {
+    "Username": "ahmed",
+    "MovieId": 11,
+    "Score": 5,
+    "RatedAt": "2026-05-13T14:40:00"
+  },
+  {
+    "Username": "ahmed",
+    "MovieId": 21,
+    "Score": 4,
+    "RatedAt": "2026-05-13T14:45:00"
+  },
+  {
+    "Username": "ahmed",
+    "MovieId": 33,
+    "Score": 5,
+    "RatedAt": "2026-05-13T14:50:00"
+  },
+  {
+    "Username": "ali",
+    "MovieId": 10,
+    "Score": 5,
+    "RatedAt": "2026-05-13T14:55:00"
+  },
+  {
+    "Username": "ali",
+    "MovieId": 23,
+    "Score": 4,
+    "RatedAt": "2026-05-13T15:00:00"
+  },
+  {
+    "Username": "ali",
+    "MovieId": 47,
+    "Score": 5,
+    "RatedAt": "2026-05-13T15:05:00"
+  },
+  {
+    "Username": "sara",
+    "MovieId": 1,
+    "Score": 4,
+    "RatedAt": "2026-05-13T15:10:00"
+  },
+  {
+    "Username": "sara",
+    "MovieId": 15,
+    "Score": 5,
+    "RatedAt": "2026-05-13T15:15:00"
+  },
+  {
+    "Username": "sara",
+    "MovieId": 38,
+    "Score": 4,
+    "RatedAt": "2026-05-13T15:20:00"
+  },
+  {
+    "Username": "nora",
+    "MovieId": 3,
+    "Score": 4,
+    "RatedAt": "2026-05-13T15:25:00"
+  },
+  {
+    "Username": "nora",
+    "MovieId": 13,
+    "Score": 5,
+    "RatedAt": "2026-05-13T15:30:00"
+  },
+  {
+    "Username": "nora",
+    "MovieId": 45,
+    "Score": 5,
+    "RatedAt": "2026-05-13T15:35:00"
+  },
+  {
+    "Username": "omar",
+    "MovieId": 8,
+    "Score": 5,
+    "RatedAt": "2026-05-13T15:40:00"
+  },
+  {
+    "Username": "omar",
+    "MovieId": 14,
+    "Score": 5,
+    "RatedAt": "2026-05-13T15:45:00"
+  },
+  {
+    "Username": "omar",
+    "MovieId": 49,
+    "Score": 4,
+    "RatedAt": "2026-05-13T15:50:00"
+  },
+  {
+    "Username": "fatima",
+    "MovieId": 9,
+    "Score": 5,
+    "RatedAt": "2026-05-13T15:55:00"
+  },
+  {
+    "Username": "fatima",
+    "MovieId": 18,
+    "Score": 4,
+    "RatedAt": "2026-05-13T16:00:00"
+  },
+  {
+    "Username": "fatima",
+    "MovieId": 39,
+    "Score": 5,
+    "RatedAt": "2026-05-13T16:05:00"
+  },
+  {
+    "Username": "khalid",
+    "MovieId": 1,
+    "Score": 4,
+    "RatedAt": "2026-05-13T16:10:00"
+  },
+  {
+    "Username": "khalid",
+    "MovieId": 22,
+    "Score": 5,
+    "RatedAt": "2026-05-13T16:15:00"
+  },
+  {
+    "Username": "khalid",
+    "MovieId": 44,
+    "Score": 4,
+    "RatedAt": "2026-05-13T16:20:00"
+  },
+  {
+    "Username": "laila",
+    "MovieId": 3,
+    "Score": 4,
+    "RatedAt": "2026-05-13T16:25:00"
+  },
+  {
+    "Username": "laila",
+    "MovieId": 16,
+    "Score": 5,
+    "RatedAt": "2026-05-13T16:30:00"
+  },
+  {
+    "Username": "laila",
+    "MovieId": 25,
+    "Score": 5,
+    "RatedAt": "2026-05-13T16:35:00"
+  },
+  {
+    "Username": "zain",
+    "MovieId": 2,
+    "Score": 5,
+    "RatedAt": "2026-05-13T16:40:00"
+  },
+  {
+    "Username": "zain",
+    "MovieId": 19,
+    "Score": 5,
+    "RatedAt": "2026-05-13T16:45:00"
+  },
+  {
+    "Username": "zain",
+    "MovieId": 40,
+    "Score": 4,
+    "RatedAt": "2026-05-13T16:50:00"
+  },
+  {
+    "Username": "huda",
+    "MovieId": 1,
+    "Score": 3,
+    "RatedAt": "2026-05-13T16:55:00"
+  },
+  {
+    "Username": "huda",
+    "MovieId": 5,
+    "Score": 5,
+    "RatedAt": "2026-05-13T17:00:00"
+  },
+  {
+    "Username": "huda",
+    "MovieId": 28,
+    "Score": 4,
+    "RatedAt": "2026-05-13T17:05:00"
+  },
+  {
+    "Username": "ahmed",
+    "MovieId": 3,
+    "Score": 5,
+    "RatedAt": "2026-05-13T17:10:00"
+  },
+  {
+    "Username": "ahmed",
+    "MovieId": 30,
+    "Score": 5,
+    "RatedAt": "2026-05-13T17:15:00"
+  },
+  {
+    "Username": "ali",
+    "MovieId": 4,
+    "Score": 4,
+    "RatedAt": "2026-05-13T17:20:00"
+  },
+  {
+    "Username": "ali",
+    "MovieId": 31,
+    "Score": 4,
+    "RatedAt": "2026-05-13T17:25:00"
+  },
+  {
+    "Username": "sara",
+    "MovieId": 6,
+    "Score": 4,
+    "RatedAt": "2026-05-13T17:30:00"
+  },
+  {
+    "Username": "sara",
+    "MovieId": 32,
+    "Score": 5,
+    "RatedAt": "2026-05-13T17:35:00"
+  },
+  {
+    "Username": "nora",
+    "MovieId": 7,
+    "Score": 4,
+    "RatedAt": "2026-05-13T17:40:00"
+  },
+  {
+    "Username": "nora",
+    "MovieId": 35,
+    "Score": 5,
+    "RatedAt": "2026-05-13T17:45:00"
+  },
+  {
+    "Username": "omar",
+    "MovieId": 10,
+    "Score": 5,
+    "RatedAt": "2026-05-13T17:50:00"
+  },
+  {
+    "Username": "omar",
+    "MovieId": 37,
+    "Score": 5,
+    "RatedAt": "2026-05-13T17:55:00"
+  },
+  {
+    "Username": "fatima",
+    "MovieId": 11,
+    "Score": 4,
+    "RatedAt": "2026-05-13T18:00:00"
+  },
+  {
+    "Username": "fatima",
+    "MovieId": 40,
+    "Score": 4,
+    "RatedAt": "2026-05-13T18:05:00"
+  },
+  {
+    "Username": "khalid",
+    "MovieId": 12,
+    "Score": 5,
+    "RatedAt": "2026-05-13T18:10:00"
+  },
+  {
+    "Username": "khalid",
+    "MovieId": 43,
+    "Score": 4,
+    "RatedAt": "2026-05-13T18:15:00"
+  },
+  {
+    "Username": "laila",
+    "MovieId": 14,
+    "Score": 5,
+    "RatedAt": "2026-05-13T18:20:00"
+  },
+  {
+    "Username": "laila",
+    "MovieId": 46,
+    "Score": 4,
+    "RatedAt": "2026-05-13T18:25:00"
+  },
+  {
+    "Username": "zain",
+    "MovieId": 17,
+    "Score": 4,
+    "RatedAt": "2026-05-13T18:30:00"
+  },
+  {
+    "Username": "zain",
+    "MovieId": 48,
+    "Score": 5,
+    "RatedAt": "2026-05-13T18:35:00"
+  },
+  {
+    "Username": "huda",
+    "MovieId": 20,
+    "Score": 5,
+    "RatedAt": "2026-05-13T18:40:00"
+  },
+  {
+    "Username": "huda",
+    "MovieId": 50,
+    "Score": 4,
+    "RatedAt": "2026-05-13T18:45:00"
+  },
+  {
+    "Username": "ahmed",
+    "MovieId": 12,
+    "Score": 5,
+    "RatedAt": "2026-05-13T18:50:00"
+  },
+  {
+    "Username": "ali",
+    "MovieId": 12,
+    "Score": 5,
+    "RatedAt": "2026-05-13T18:55:00"
+  },
+  {
+    "Username": "sara",
+    "MovieId": 12,
+    "Score": 4,
+    "RatedAt": "2026-05-13T19:00:00"
+  },
+  {
+    "Username": "nora",
+    "MovieId": 12,
+    "Score": 3,
+    "RatedAt": "2026-05-13T19:05:00"
+  },
+  {
+    "Username": "omar",
+    "MovieId": 12,
+    "Score": 5,
+    "RatedAt": "2026-05-13T19:10:00"
+  },
+  {
+    "Username": "fatima",
+    "MovieId": 12,
+    "Score": 4,
+    "RatedAt": "2026-05-13T19:15:00"
+  },
+  {
+    "Username": "khalid",
+    "MovieId": 8,
+    "Score": 5,
+    "RatedAt": "2026-05-13T19:20:00"
+  },
+  {
+    "Username": "laila",
+    "MovieId": 8,
+    "Score": 4,
+    "RatedAt": "2026-05-13T19:25:00"
+  },
+  {
+    "Username": "zain",
+    "MovieId": 8,
+    "Score": 5,
+    "RatedAt": "2026-05-13T19:30:00"
+  },
+  {
+    "Username": "huda",
+    "MovieId": 8,
+    "Score": 3,
+    "RatedAt": "2026-05-13T19:35:00"
+  },
+  {
+    "Username": "ahmed",
+    "MovieId": 25,
+    "Score": 5,
+    "RatedAt": "2026-05-13T19:40:00"
+  },
+  {
+    "Username": "ali",
+    "MovieId": 25,
+    "Score": 4,
+    "RatedAt": "2026-05-13T19:45:00"
+  },
+  {
+    "Username": "sara",
+    "MovieId": 25,
+    "Score": 5,
+    "RatedAt": "2026-05-13T19:50:00"
+  },
+  {
+    "Username": "nora",
+    "MovieId": 25,
+    "Score": 4,
+    "RatedAt": "2026-05-13T19:55:00"
+  }
+]

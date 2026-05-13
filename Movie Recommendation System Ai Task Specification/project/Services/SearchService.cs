@@ -1,96 +1,44 @@
-﻿
-using project.Models;
-using System;
+﻿using project.Models;
 using System.Collections.Generic;
 using System.Linq;
-using YourProject.Interfaces;
-using project.Models;
 
-namespace YourProject.Services
+namespace project.Services
 {
-    public class SearchService : ISearch
+    public class SearchService
     {
         private List<Movie> _movies;
 
-        // Constructor
         public SearchService(List<Movie> movies)
         {
-            _movies = movies;
+            // التأكد من تهيئة القائمة حتى لو كانت فارغة لتجنب الـ NullReferenceException
+            _movies = movies ?? new List<Movie>();
         }
 
-        // البحث بالاسم
-        public List<Movie> SearchByTitle(string title)
+        public List<Movie> SearchByTitle(string query)
         {
-            return _movies
-                .Where(m => m.Title.ToLower().Contains(title.ToLower()))
-                .ToList();
-        }
+            if (string.IsNullOrWhiteSpace(query))
+            {
+                return _movies; // إرجاع كل الأفلام إذا كان مربع البحث فارغاً
+            }
 
-        //  البحث بالتصنيف
-        public List<Movie> SearchByGenre(string genre)
-        {
-            return _movies
-                .Where(m => m.Genre.ToLower().Contains(genre.ToLower()))
-                .ToList();
-        }
+            // تحويل نص البحث إلى حروف صغيرة لضمان مرونة البحث
+            string lowerQuery = query.Trim().ToLower();
 
-        // البحث بالسنة
-        public List<Movie> SearchByYear(int year)
-        {
-            return _movies
-                .Where(m => m.ReleaseYear == year)
-                .ToList();
-        }
-
-        //  البحث بالمخرج
-        public List<Movie> SearchByDirector(string director)
-        {
-            return _movies
-                .Where(m => m.Director.ToLower().Contains(director.ToLower()))
-                .ToList();
-        }
-
-        //  البحث بالتقييم
-        public List<Movie> SearchByRating(double rating)
-        {
-            return _movies
-                .Where(m => m.Rating >= rating)
-                .OrderByDescending(m => m.Rating)
-                .ToList();
-        }
-
-        //  بحث ذكي (Smart Search)
-        public List<Movie> SmartSearch(string keyword)
-        {
             return _movies
                 .Where(m =>
-                    m.Title.ToLower().Contains(keyword.ToLower()) ||
-                    m.Genre.ToLower().Contains(keyword.ToLower()) ||
-                    m.Director.ToLower().Contains(keyword.ToLower()) ||
-                    m.ReleaseYear.ToString().Contains(keyword)
+                    // 1. البحث في العنوان
+                    (m.Title != null && m.Title.ToLower().Contains(lowerQuery)) ||
+
+                    // 2. البحث في النوع (هذا سيحل مشكلة كلمة Action)
+                    (m.Genre != null && m.Genre.ToLower().Contains(lowerQuery)) ||
+
+                    // 3. البحث في المخرج
+                    (m.Director != null && m.Director.ToLower().Contains(lowerQuery)) ||
+
+                    // 4. البحث في سنة الإصدار (تحويل الرقم لنص)
+                    m.ReleaseYear.ToString().Contains(lowerQuery)
                 )
-                .OrderByDescending(m => m.Rating)
                 .ToList();
-        }
-
-        //  عرض النتائج + معالجة عدم وجود نتائج
-        public void DisplayResults(List<Movie> movies)
-        {
-            if (movies == null || movies.Count == 0)
-            {
-                Console.WriteLine("❌ No movies found!");
-                return;
-            }
-
-            Console.WriteLine("\n Search Results:");
-            Console.WriteLine("-------------");
-
-            foreach (var movie in movies)
-            {
-                Console.WriteLine($" {movie.Title} | {movie.Genre} | {movie.ReleaseYear} | ⭐ {movie.Rating}");
-            }
-
-            Console.WriteLine("-----------\n");
         }
     }
 }
