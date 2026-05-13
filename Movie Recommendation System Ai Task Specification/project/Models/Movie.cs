@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using project.Models;
+using System.Collections.Generic;
 
 namespace project.Models
 {

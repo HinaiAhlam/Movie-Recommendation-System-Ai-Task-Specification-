@@ -3,7 +3,6 @@ using project.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using YourProject.Services;
 
 namespace project
 {
@@ -11,17 +10,21 @@ namespace project
     {
         static void Main(string[] args)
         {
-            // تهيئة الخدمات مع معالجة تنبيهات الـ null
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            // --- 1. تهيئة الخدمات (Services Initialization) ---
             AuthenticationService authService = new AuthenticationService();
             MovieService movieService = new MovieService();
             RatingService ratingService = new RatingService();
 
+            // تحميل بيانات الأفلام من ملف JSON
             movieService.LoadMovies();
 
+            // تهيئة خدمة البحث بناءً على الأفلام المحملة
             var allMovies = movieService.GetAllMovies() ?? new List<Movie>();
             SearchService searchService = new SearchService(allMovies);
 
             bool running = true;
+
             while (running)
             {
                 Console.Clear();
@@ -31,12 +34,12 @@ namespace project
                 Console.WriteLine("======================================");
                 Console.ResetColor();
 
-                Console.WriteLine("1. Register");
-                Console.WriteLine("2. Login");
+                Console.WriteLine("1. Register (New User)");
+                Console.WriteLine("2. Login (Existing User)");
                 Console.WriteLine("3. Exit");
 
                 Console.Write("\nSelect an option: ");
-                string choice = Console.ReadLine()?.Trim() ?? "";
+                string choice = Console.ReadLine() ?? "";
 
                 switch (choice)
                 {
@@ -48,6 +51,7 @@ namespace project
                         break;
                     case "3":
                         running = false;
+                        Console.WriteLine("\nGoodbye!");
                         break;
                     default:
                         ShowError("Invalid selection.");
@@ -56,255 +60,227 @@ namespace project
             }
         }
 
-        // --- نظام التقييم المطور (بناءً على image_566a14.png) ---
-        static void HandleRatingMenu(AuthenticationService authService, RatingService ratingService, MovieService movieService)
+        // ================= لوحة التحكم (DASHBOARD) =================
+        static void ShowDashboard(
+            AuthenticationService auth,
+            MovieService movieService,
+            SearchService searchService,
+            RatingService ratingService)
         {
-            if (authService.CurrentUser == null) return;
+            bool logged = true;
 
-            bool inRatingMenu = true;
-            while (inRatingMenu)
+            while (logged)
             {
                 Console.Clear();
-                Console.ForegroundColor = ConsoleColor.Magenta;
-                Console.WriteLine("========== RATING SYSTEM ==========");
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine($"===== Welcome, {auth.CurrentUser?.Username} =====");
                 Console.ResetColor();
-                Console.WriteLine("1. Add/Rate Movie (1-5)");
-                Console.WriteLine("2. Update Existing Rating");
-                Console.WriteLine("3. Remove Rating");
-                Console.WriteLine("4. Back to Dashboard");
-                Console.Write("\nSelect action: ");
 
-                string choice = Console.ReadLine()?.Trim() ?? "";
+                Console.WriteLine("1. Browse Movies");
+                Console.WriteLine("2. Search Movies");
+                Console.WriteLine("3. Rate Movie (AI Input)");
+                Console.WriteLine("4. AI Recommendations 🤖");
+                Console.WriteLine("5. Watch History");
+                Console.WriteLine("6. Logout");
+
+                Console.Write("\nChoose action: ");
+                var choice = Console.ReadLine();
+
                 switch (choice)
                 {
-                    case "1":
-                        ProcessAddRating(authService, ratingService, movieService);
+                    case "1": DisplayBrowse(movieService); break;
+                    case "2": HandleSearch(searchService); break;
+                    case "3": HandleRate(auth, ratingService, movieService); break;
+                    case "4": HandleAI(auth, movieService, ratingService); break;
+                    case "5": DisplayHistory(auth, movieService); break;
+                    case "6":
+                        logged = false;
+                        auth.Logout();
                         break;
-                    case "2":
-                        ProcessUpdateRating(authService, ratingService);
-                        break;
-                    case "3":
-                        ProcessRemoveRating(authService, ratingService);
-                        break;
-                    case "4":
-                        inRatingMenu = false;
-                        break;
-                    default:
-                        ShowError("Invalid selection.");
-                        break;
+                    default: ShowError("Invalid choice."); break;
                 }
             }
         }
 
-        static void ProcessAddRating(AuthenticationService authService, RatingService ratingService, MovieService movieService)
+        // ================= نظام الـ AI (Member 5 Engine) =================
+        static void HandleAI(
+            AuthenticationService auth,
+            MovieService movieService,
+            RatingService ratingService)
         {
-            Console.Write("Enter Movie ID to rate: ");
-            if (int.TryParse(Console.ReadLine(), out int mId))
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("===== AI RECOMMENDATIONS =====\n");
+            Console.ResetColor();
+
+            var user = auth.CurrentUser;
+            if (user == null) return;
+
+            var movies = movieService.GetAllMovies() ?? new List<Movie>();
+            var allRatings = ratingService.GetAllRatings();
+
+            // تجهيز محركات الذكاء الاصطناعي (أكواد الشخص الخامس)
+            var content = new ContentBasedService(movies, allRatings);
+            var collab = new CollaborativeFilteringService(auth.GetUsers(), movies, allRatings);
+
+            // محرك التوصية النهائي (Hybrid System)
+            var recommender = new RecommendationService(content, collab);
+            var result = recommender.GetFinalRecommendations(user);
+
+            if (result == null || result.Count == 0)
             {
-                var movie = movieService.GetAllMovies()?.FirstOrDefault(m => m.Id == mId);
+                Console.WriteLine("No recommendations yet.");
+                Console.WriteLine("👉 Tip: Rate more movies so the AI can understand your taste!");
+            }
+            else
+            {
+                Console.WriteLine("Based on your preferences, you might like:\n");
+                foreach (var m in result)
+                    Console.WriteLine($"🎬 {m.Title} | Genre: {m.Genre} | Score: {m.Rating}/5");
+            }
+
+            Console.WriteLine("\nPress any key to return...");
+            Console.ReadKey();
+        }
+
+        // ================= نظام التقييم (الحل لمشكلة الحفظ في JSON) =================
+        static void HandleRate(AuthenticationService auth, RatingService ratingService, MovieService movieService)
+        {
+            Console.Clear();
+            Console.WriteLine("========== RATE A MOVIE ==========\n");
+
+            Console.Write("Enter Movie ID: ");
+            if (int.TryParse(Console.ReadLine(), out int id))
+            {
+                var movie = movieService.GetAllMovies()?.FirstOrDefault(m => m.Id == id);
                 if (movie != null)
                 {
                     Console.Write("Enter Rating (1-5): ");
                     if (int.TryParse(Console.ReadLine(), out int score) && score >= 1 && score <= 5)
                     {
-                        ratingService.AddRating(authService.CurrentUser.Username, mId, score);
+                        // 1. إضافة التقييم لخدمة التقييمات
+                        ratingService.AddRating(auth.CurrentUser.Username, id, score);
 
-                        // تحديث بيانات المستخدم وسجل المشاهدة
-                        if (!authService.CurrentUser.WatchHistory.Contains(mId))
-                            authService.CurrentUser.WatchHistory.Add(mId);
-                        if (!authService.CurrentUser.FavoriteGenres.Contains(movie.Genre))
-                            authService.CurrentUser.FavoriteGenres.Add(movie.Genre);
+                        // 2. تحديث سجل المشاهدة (Watch History)
+                        if (!auth.CurrentUser.WatchHistory.Contains(id))
+                            auth.CurrentUser.WatchHistory.Add(id);
 
-                        authService.SaveUsers();
-                        Console.WriteLine("\n[✔] Rating added and user profile updated!");
+                        // 3. تحديث الأنواع المفضلة (Favorite Genres)
+                        if (!auth.CurrentUser.FavoriteGenres.Contains(movie.Genre))
+                            auth.CurrentUser.FavoriteGenres.Add(movie.Genre);
+
+                        // 4. *** الحل الجوهري ***: حفظ التعديلات فوراً في ملف Users.json
+                        auth.SaveUsers();
+
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("\n[✔] Rating Saved! JSON file and AI profile updated.");
+                        Console.ResetColor();
                     }
-                    else { ShowError("Rating must be between 1 and 5."); }
+                    else ShowError("Rating must be 1 to 5.");
                 }
-                else { ShowError("Movie not found."); }
+                else ShowError("Movie ID not found.");
             }
+            else ShowError("Invalid Input.");
+
+            Console.WriteLine("\nPress any key to return...");
             Console.ReadKey();
         }
 
-        static void ProcessUpdateRating(AuthenticationService authService, RatingService ratingService)
+        // ================= وظائف مساعدة (Helpers) =================
+
+        static void HandleRegistration(AuthenticationService auth)
         {
-            Console.Write("Enter Movie ID to update: ");
-            if (int.TryParse(Console.ReadLine(), out int mId))
-            {
-                Console.Write("Enter New Rating (1-5): ");
-                if (int.TryParse(Console.ReadLine(), out int newScore) && newScore >= 1 && newScore <= 5)
-                {
-                    bool updated = ratingService.UpdateRating(authService.CurrentUser.Username, mId, newScore);
-                    if (updated) Console.WriteLine("\n[✔] Rating updated successfully!");
-                    else ShowError("No existing rating found for this movie.");
-                }
-            }
-            Console.ReadKey();
-        }
-
-        static void ProcessRemoveRating(AuthenticationService authService, RatingService ratingService)
-        {
-            Console.Write("Enter Movie ID to remove: ");
-            if (int.TryParse(Console.ReadLine(), out int mId))
-            {
-                bool removed = ratingService.RemoveRating(authService.CurrentUser.Username, mId);
-                if (removed) Console.WriteLine("\n[✔] Rating removed successfully!");
-                else ShowError("No rating found to remove.");
-            }
-            Console.ReadKey();
-        }
-
-        // --- الخدمات الأخرى (Dashboard, Login, Search) ---
-        static void ShowDashboard(AuthenticationService authService, MovieService movieService, SearchService searchService, RatingService ratingService)
-        {
-            bool inDashboard = true;
-            while (inDashboard)
-            {
-                Console.Clear();
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("Phase 3 — User Dashboard");
-                Console.ResetColor();
-
-                string currentUserName = authService.CurrentUser?.Username ?? "User";
-                Console.WriteLine($"Welcome, {currentUserName}\n");
-
-                Console.WriteLine("1. Browse Movies");
-                Console.WriteLine("2. Search Movies");
-                Console.WriteLine("3. Rating System (Add/Update/Remove)");
-                Console.WriteLine("4. View Recommendations");
-                Console.WriteLine("5. Watch History");
-                Console.WriteLine("6. Logout");
-
-                Console.Write("\nSelect action: ");
-                string dashChoice = Console.ReadLine()?.Trim() ?? "";
-
-                switch (dashChoice)
-                {
-                    case "1": DisplayAllMovies(movieService); break;
-                    case "2": HandleSearch(searchService); break;
-                    case "3": HandleRatingMenu(authService, ratingService, movieService); break;
-                    case "4":
-                        Console.WriteLine("\n[Recommendations feature coming soon...]");
-                        Console.ReadKey();
-                        break;
-                    case "5": ShowWatchHistory(authService, movieService); break;
-                    case "6":
-                        authService.Logout();
-                        inDashboard = false;
-                        break;
-                    default: ShowError("Invalid selection."); break;
-                }
-            }
-        }
-
-        static void HandleRegistration(AuthenticationService authService)
-        {
-            Console.Clear();
             Console.Write("Create Username: ");
-            string regUser = Console.ReadLine()?.Trim() ?? "";
+            string u = Console.ReadLine() ?? "";
             Console.Write("Create Password: ");
-            string regPass = Console.ReadLine() ?? "";
+            string p = Console.ReadLine() ?? "";
 
-            if (authService.Register(regUser, regPass))
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("\n[✔] Registration Successful!");
-                Console.ResetColor();
-            }
-            else ShowError("Registration failed.");
+            if (auth.Register(u, p)) Console.WriteLine("\n[✔] Registered Successfully!");
+            else ShowError("User already exists.");
             Console.ReadKey();
         }
 
-        static void HandleLogin(AuthenticationService authService, MovieService movieService, SearchService searchService, RatingService ratingService)
+        static void HandleLogin(AuthenticationService auth, MovieService m, SearchService s, RatingService r)
+        {
+            Console.Write("Username: ");
+            string u = Console.ReadLine() ?? "";
+            Console.Write("Password: ");
+            string p = Console.ReadLine() ?? "";
+
+            if (auth.Login(u, p)) ShowDashboard(auth, m, s, r);
+            else { ShowError("Invalid login."); Console.ReadKey(); }
+        }
+
+        static void DisplayBrowse(MovieService movieService)
         {
             Console.Clear();
-            Console.Write("Username: ");
-            string logUser = Console.ReadLine()?.Trim() ?? "";
-            Console.Write("Password: ");
-            string logPass = Console.ReadLine() ?? "";
+            Console.WriteLine("========= ALL MOVIES =========\n");
+            var movies = movieService.GetAllMovies();
 
-            if (authService.Login(logUser, logPass))
-                ShowDashboard(authService, movieService, searchService, ratingService);
+            if (movies == null || movies.Count == 0)
+            {
+                ShowError("No movies found in the system.");
+            }
             else
             {
-                ShowError("Invalid credentials.");
-                Console.ReadKey();
+                foreach (var m in movies)
+                {
+                    Console.WriteLine($"[{m.Id}] {m.Title}");
+                    Console.WriteLine($"   Genre: {m.Genre} | Year: {m.ReleaseYear} | Rating: {m.Rating}/5");
+                    Console.WriteLine("------------------------------");
+                }
             }
+            Console.WriteLine("\nPress any key to return...");
+            Console.ReadKey();
         }
 
         static void HandleSearch(SearchService searchService)
         {
             Console.Clear();
-            Console.WriteLine("========= SEARCH SYSTEM =========");
-            Console.WriteLine("1. Name | 2. Genre | 3. Year | 4. Director | 5. Rating");
-            Console.Write("\nChoose (1-5): ");
+            Console.WriteLine("========== MOVIE SEARCH ==========\n");
+            Console.Write("Search by Title, Genre, or Year: ");
+            var text = Console.ReadLine() ?? "";
 
-            string searchChoice = Console.ReadLine()?.Trim() ?? "";
-            List<Movie> results = new List<Movie>();
+            var results = searchService.SearchByTitle(text);
 
-            switch (searchChoice)
+            if (results == null || results.Count == 0)
             {
-                case "1":
-                    Console.Write("Enter name: ");
-                    results = searchService.SearchByTitle(Console.ReadLine() ?? "");
-                    break;
-                case "2":
-                    Console.Write("Enter genre: ");
-                    results = searchService.SearchByGenre(Console.ReadLine() ?? "");
-                    break;
-                case "3":
-                    Console.Write("Enter year: ");
-                    if (int.TryParse(Console.ReadLine(), out int yr)) results = searchService.SearchByYear(yr);
-                    break;
-                case "4":
-                    Console.Write("Enter director: ");
-                    results = searchService.SearchByDirector(Console.ReadLine() ?? "");
-                    break;
-                case "5":
-                    Console.Write("Enter min rating: ");
-                    if (double.TryParse(Console.ReadLine(), out double rt)) results = searchService.SearchByRating(rt);
-                    break;
+                ShowError("No matches found.");
             }
-
-            searchService.DisplayResults(results);
+            else
+            {
+                foreach (var m in results)
+                    Console.WriteLine($"🎬 {m.Title} | {m.Genre} ({m.ReleaseYear})");
+                Console.WriteLine($"\nFound {results.Count} result(s).");
+            }
             Console.ReadKey();
         }
 
-        static void ShowWatchHistory(AuthenticationService authService, MovieService movieService)
+        static void DisplayHistory(AuthenticationService auth, MovieService movieService)
         {
             Console.Clear();
             Console.WriteLine("========== WATCH HISTORY ==========\n");
-            var history = authService.CurrentUser?.WatchHistory;
-            var movies = movieService.GetAllMovies() ?? new List<Movie>();
-
+            var history = auth.CurrentUser?.WatchHistory;
             if (history == null || history.Count == 0)
-                Console.WriteLine("Your history is empty.");
+            {
+                Console.WriteLine("Your history is empty. Start rating movies!");
+            }
             else
             {
                 foreach (var id in history)
                 {
-                    var movie = movies.Find(m => m.Id == id);
+                    var movie = movieService.GetAllMovies()?.FirstOrDefault(m => m.Id == id);
                     Console.WriteLine($"- {(movie != null ? movie.Title : "Unknown Movie")}");
                 }
             }
+            Console.WriteLine("\nPress any key to return...");
             Console.ReadKey();
         }
 
-        static void DisplayAllMovies(MovieService movieService)
-        {
-            Console.Clear();
-            Console.WriteLine("========== BROWSE MOVIES ==========\n");
-            var movies = movieService.GetAllMovies() ?? new List<Movie>();
-            foreach (var movie in movies)
-            {
-                Console.WriteLine($"[{movie.Id}] {movie.Title} ({movie.ReleaseYear})");
-            }
-            Console.ReadKey();
-        }
-
-        static void ShowError(string message)
+        static void ShowError(string msg)
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"\n[✘] {message}");
+            Console.WriteLine($"\n[✘] {msg}");
             Console.ResetColor();
             System.Threading.Thread.Sleep(1000);
         }

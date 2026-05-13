@@ -9,14 +9,12 @@ namespace project.Services
 {
     public class MovieService
     {
-        private List<Movie> movies = new List<Movie>();
+        private List<Movie> movies = new();
         private readonly string filePath;
 
         public MovieService()
         {
-            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            filePath = Path.Combine(baseDirectory, "Data", "movies.json");
-
+            filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "movies.json");
             LoadMovies();
         }
 
@@ -27,77 +25,32 @@ namespace project.Services
                 if (!File.Exists(filePath))
                 {
                     Directory.CreateDirectory(Path.GetDirectoryName(filePath)!);
+                    File.WriteAllText(filePath, "[]");
                     movies = new List<Movie>();
                     return;
                 }
 
                 string json = File.ReadAllText(filePath);
 
-                if (string.IsNullOrWhiteSpace(json))
-                {
-                    movies = new List<Movie>();
-                    return;
-                }
-
-                movies = JsonSerializer.Deserialize<List<Movie>>(json,
-                    new JsonSerializerOptions
-                    {
-                        PropertyNameCaseInsensitive = true
-                    }) ?? new List<Movie>();
+                movies = string.IsNullOrWhiteSpace(json)
+                    ? new List<Movie>()
+                    : JsonSerializer.Deserialize<List<Movie>>(json) ?? new List<Movie>();
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error Loading Movies: " + ex.Message);
+                Console.WriteLine("Error loading movies: " + ex.Message);
                 movies = new List<Movie>();
             }
         }
 
-        public void SaveMovies()
+        public List<Movie> GetAllMovies()
         {
-            try
-            {
-                string json = JsonSerializer.Serialize(movies, new JsonSerializerOptions
-                {
-                    WriteIndented = true
-                });
-
-                File.WriteAllText(filePath, json);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error Saving Movies: " + ex.Message);
-            }
+            return movies;
         }
 
-        public List<Movie> GetAllMovies() => movies;
-
-        public void AddMovie(Movie movie)
+        public Movie? GetById(int id)
         {
-            movie.Id = movies.Any() ? movies.Max(m => m.Id) + 1 : 1;
-            movies.Add(movie);
-            SaveMovies();
-        }
-
-        // ✅ مهم: البحث يرجّع قائمة
-        public List<Movie> SearchByTitle(string title)
-        {
-            return movies
-                .Where(m => m.Title != null &&
-                            m.Title.Contains(title, StringComparison.OrdinalIgnoreCase))
-                .ToList();
-        }
-
-        public List<Movie> GetByGenre(string genre)
-        {
-            return movies
-                .Where(m => m.Genre != null &&
-                            m.Genre.Equals(genre, StringComparison.OrdinalIgnoreCase))
-                .ToList();
-        }
-
-        public List<Movie> GetByYear(int year)
-        {
-            return movies.Where(m => m.ReleaseYear == year).ToList();
+            return movies.FirstOrDefault(m => m.Id == id);
         }
     }
 }
