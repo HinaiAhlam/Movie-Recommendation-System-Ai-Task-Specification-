@@ -3,286 +3,368 @@ using project.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading;
+using System.IO;
 
 namespace project
 {
     class Program
     {
+        static string dbFile = "cinema_empire_vault.json";
+
         static void Main(string[] args)
         {
-            Console.OutputEncoding = System.Text.Encoding.UTF8;
-            // --- 1. تهيئة الخدمات (Services Initialization) ---
+            Visuals.Setup();
+
             AuthenticationService authService = new AuthenticationService();
             MovieService movieService = new MovieService();
             RatingService ratingService = new RatingService();
 
-            // تحميل بيانات الأفلام من ملف JSON
             movieService.LoadMovies();
-
-            // تهيئة خدمة البحث بناءً على الأفلام المحملة
             var allMovies = movieService.GetAllMovies() ?? new List<Movie>();
-            SearchService searchService = new SearchService(allMovies);
+            if (allMovies.Count < 10) allMovies = Generate50Movies();
 
-            bool running = true;
+            Visuals.PlayIntroSound();
 
-            while (running)
+            while (true)
             {
-                Console.Clear();
-                Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine("======================================");
-                Console.WriteLine("    MOVIE RECOMMENDATION SYSTEM (v1)   ");
-                Console.WriteLine("======================================");
-                Console.ResetColor();
-
-                Console.WriteLine("1. Register (New User)");
-                Console.WriteLine("2. Login (Existing User)");
-                Console.WriteLine("3. Exit");
-
-                Console.Write("\nSelect an option: ");
-                string choice = Console.ReadLine() ?? "";
-
-                switch (choice)
+                if (authService.CurrentUser == null)
                 {
-                    case "1":
-                        HandleRegistration(authService);
-                        break;
-                    case "2":
-                        HandleLogin(authService, movieService, searchService, ratingService);
-                        break;
-                    case "3":
-                        running = false;
-                        Console.WriteLine("\nGoodbye!");
-                        break;
-                    default:
-                        ShowError("Invalid selection.");
-                        break;
-                }
-            }
-        }
+                    // المرحلة 1: شاشة الدخول (اللوجو والخيارات ممركزة تماماً)
+                    int startChoice = Visuals.ShowFullCenteredGateway(new[] { "LOGIN SYSTEM", "REGISTER ACCOUNT", "EXIT" });
+                    if (startChoice == 2) break;
 
-        // ================= لوحة التحكم (DASHBOARD) =================
-        static void ShowDashboard(
-            AuthenticationService auth,
-            MovieService movieService,
-            SearchService searchService,
-            RatingService ratingService)
-        {
-            bool logged = true;
+                    Visuals.Header();
+                    string u = Visuals.GetInputBox("USERNAME IDENTIFICATION");
+                    string p = Visuals.GetInputBox("SECURITY PASSWORD", true);
 
-            while (logged)
-            {
-                Console.Clear();
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine($"===== Welcome, {auth.CurrentUser?.Username} =====");
-                Console.ResetColor();
-
-                Console.WriteLine("1. Browse Movies");
-                Console.WriteLine("2. Search Movies");
-                Console.WriteLine("3. Rate Movie (AI Input)");
-                Console.WriteLine("4. AI Recommendations 🤖");
-                Console.WriteLine("5. Watch History");
-                Console.WriteLine("6. Logout");
-
-                Console.Write("\nChoose action: ");
-                var choice = Console.ReadLine();
-
-                switch (choice)
-                {
-                    case "1": DisplayBrowse(movieService); break;
-                    case "2": HandleSearch(searchService); break;
-                    case "3": HandleRate(auth, ratingService, movieService); break;
-                    case "4": HandleAI(auth, movieService, ratingService); break;
-                    case "5": DisplayHistory(auth, movieService); break;
-                    case "6":
-                        logged = false;
-                        auth.Logout();
-                        break;
-                    default: ShowError("Invalid choice."); break;
-                }
-            }
-        }
-
-        // ================= نظام الـ AI (Member 5 Engine) =================
-        static void HandleAI(
-            AuthenticationService auth,
-            MovieService movieService,
-            RatingService ratingService)
-        {
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("===== AI RECOMMENDATIONS =====\n");
-            Console.ResetColor();
-
-            var user = auth.CurrentUser;
-            if (user == null) return;
-
-            var movies = movieService.GetAllMovies() ?? new List<Movie>();
-            var allRatings = ratingService.GetAllRatings();
-
-            // تجهيز محركات الذكاء الاصطناعي (أكواد الشخص الخامس)
-            var content = new ContentBasedService(movies, allRatings);
-            var collab = new CollaborativeFilteringService(auth.GetUsers(), movies, allRatings);
-
-            // محرك التوصية النهائي (Hybrid System)
-            var recommender = new RecommendationService(content, collab);
-            var result = recommender.GetFinalRecommendations(user);
-
-            if (result == null || result.Count == 0)
-            {
-                Console.WriteLine("No recommendations yet.");
-                Console.WriteLine("👉 Tip: Rate more movies so the AI can understand your taste!");
-            }
-            else
-            {
-                Console.WriteLine("Based on your preferences, you might like:\n");
-                foreach (var m in result)
-                    Console.WriteLine($"🎬 {m.Title} | Genre: {m.Genre} | Score: {m.Rating}/5");
-            }
-
-            Console.WriteLine("\nPress any key to return...");
-            Console.ReadKey();
-        }
-
-        // ================= نظام التقييم (الحل لمشكلة الحفظ في JSON) =================
-        static void HandleRate(AuthenticationService auth, RatingService ratingService, MovieService movieService)
-        {
-            Console.Clear();
-            Console.WriteLine("========== RATE A MOVIE ==========\n");
-
-            Console.Write("Enter Movie ID: ");
-            if (int.TryParse(Console.ReadLine(), out int id))
-            {
-                var movie = movieService.GetAllMovies()?.FirstOrDefault(m => m.Id == id);
-                if (movie != null)
-                {
-                    Console.Write("Enter Rating (1-5): ");
-                    if (int.TryParse(Console.ReadLine(), out int score) && score >= 1 && score <= 5)
+                    if (startChoice == 1)
                     {
-                        // 1. إضافة التقييم لخدمة التقييمات
-                        ratingService.AddRating(auth.CurrentUser.Username, id, score);
-
-                        // 2. تحديث سجل المشاهدة (Watch History)
-                        if (!auth.CurrentUser.WatchHistory.Contains(id))
-                            auth.CurrentUser.WatchHistory.Add(id);
-
-                        // 3. تحديث الأنواع المفضلة (Favorite Genres)
-                        if (!auth.CurrentUser.FavoriteGenres.Contains(movie.Genre))
-                            auth.CurrentUser.FavoriteGenres.Add(movie.Genre);
-
-                        // 4. *** الحل الجوهري ***: حفظ التعديلات فوراً في ملف Users.json
-                        auth.SaveUsers();
-
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("\n[✔] Rating Saved! JSON file and AI profile updated.");
-                        Console.ResetColor();
+                        if (authService.Register(u, p)) Visuals.ShowMessage("ACCOUNT CREATED!", ConsoleColor.Green);
+                        else Visuals.ShowMessage("USER EXISTS!", ConsoleColor.Red);
                     }
-                    else ShowError("Rating must be 1 to 5.");
+                    else
+                    {
+                        if (authService.Login(u, p)) Visuals.ShowMessage("ACCESS GRANTED!", ConsoleColor.Cyan);
+                        else Visuals.ShowMessage("INVALID LOGIN!", ConsoleColor.Red);
+                    }
                 }
-                else ShowError("Movie ID not found.");
-            }
-            else ShowError("Invalid Input.");
-
-            Console.WriteLine("\nPress any key to return...");
-            Console.ReadKey();
-        }
-
-        // ================= وظائف مساعدة (Helpers) =================
-
-        static void HandleRegistration(AuthenticationService auth)
-        {
-            Console.Write("Create Username: ");
-            string u = Console.ReadLine() ?? "";
-            Console.Write("Create Password: ");
-            string p = Console.ReadLine() ?? "";
-
-            if (auth.Register(u, p)) Console.WriteLine("\n[✔] Registered Successfully!");
-            else ShowError("User already exists.");
-            Console.ReadKey();
-        }
-
-        static void HandleLogin(AuthenticationService auth, MovieService m, SearchService s, RatingService r)
-        {
-            Console.Write("Username: ");
-            string u = Console.ReadLine() ?? "";
-            Console.Write("Password: ");
-            string p = Console.ReadLine() ?? "";
-
-            if (auth.Login(u, p)) ShowDashboard(auth, m, s, r);
-            else { ShowError("Invalid login."); Console.ReadKey(); }
-        }
-
-        static void DisplayBrowse(MovieService movieService)
-        {
-            Console.Clear();
-            Console.WriteLine("========= ALL MOVIES =========\n");
-            var movies = movieService.GetAllMovies();
-
-            if (movies == null || movies.Count == 0)
-            {
-                ShowError("No movies found in the system.");
-            }
-            else
-            {
-                foreach (var m in movies)
+                else
                 {
-                    Console.WriteLine($"[{m.Id}] {m.Title}");
-                    Console.WriteLine($"   Genre: {m.Genre} | Year: {m.ReleaseYear} | Rating: {m.Rating}/5");
-                    Console.WriteLine("------------------------------");
+                    string personality = Visuals.AnalyzeViewerPersonality(authService.CurrentUser, allMovies);
+                    string[] hubOpts = { "🎥 EXPLORE 50 MOVIES", "🔎 ADVANCED SEARCH", "⭐ RATE A MOVIE", "🤖 AI TOP PICKS", "🎰 SURPRISE ME", "📜 WATCH HISTORY", "📤 EXPORT DATA", "🚪 LOGOUT" };
+                    int c = Visuals.ShowMenu("COMMAND HUB", hubOpts, authService.CurrentUser.Username, personality);
+
+                    var allRatings = ratingService.GetAllRatings();
+                    SearchService searchService = new SearchService(allMovies);
+                    ContentBasedService contentService = new ContentBasedService(allMovies, allRatings);
+                    CollaborativeFilteringService collab = new CollaborativeFilteringService(authService.GetUsers(), allMovies, allRatings);
+                    RecommendationService recService = new RecommendationService(contentService, collab);
+
+                    switch (c)
+                    {
+                        case 0:
+                            var selBrowse = Visuals.ShowMovieGrid(allMovies, authService.CurrentUser.Username);
+                            if (selBrowse != null) HandleMovieFlow(selBrowse, authService, ratingService);
+                            break;
+                        case 1:
+                            Visuals.Header(authService.CurrentUser.Username);
+                            string q = Visuals.GetInputBox("NAME/GENRE/YEAR").ToLower();
+                            var res = allMovies.Where(m => m.Title.ToLower().Contains(q) || m.Genre.ToLower().Contains(q) || m.ReleaseYear.ToString() == q).ToList();
+                            if (res.Any())
+                            {
+                                var s = Visuals.ShowMovieGrid(res, authService.CurrentUser.Username, "SEARCH RESULTS");
+                                if (s != null) HandleMovieFlow(s, authService, ratingService);
+                            }
+                            else Visuals.ShowMessage("NOT FOUND!", ConsoleColor.Red);
+                            break;
+                        case 2:
+                            Visuals.Header(authService.CurrentUser.Username);
+                            string idInput = Visuals.GetInputBox("ENTER MOVIE ID");
+                            if (int.TryParse(idInput, out int mid))
+                            {
+                                var movie = allMovies.FirstOrDefault(m => m.Id == mid);
+                                if (movie != null) HandleMovieFlow(movie, authService, ratingService);
+                                else Visuals.ShowMessage("NOT FOUND!", ConsoleColor.Red);
+                            }
+                            break;
+                        case 3:
+                            Visuals.Header(authService.CurrentUser.Username);
+                            Visuals.ShowProgressBar("AI ANALYZING");
+                            var recs = recService.GetFinalRecommendations(authService.CurrentUser);
+                            var aiSel = Visuals.ShowMovieGrid(recs, authService.CurrentUser.Username, "AI SMART PICKS");
+                            if (aiSel != null) HandleMovieFlow(aiSel, authService, ratingService);
+                            break;
+                        case 4:
+                            var randomMovie = Visuals.ShowSurpriseWheel(allMovies, authService.CurrentUser.Username);
+                            if (randomMovie != null) HandleMovieFlow(randomMovie, authService, ratingService);
+                            break;
+                        case 5:
+                            var hMovies = allMovies.Where(m => authService.CurrentUser.WatchHistory.Contains(m.Id)).ToList();
+                            Visuals.ShowMovieGrid(hMovies, authService.CurrentUser.Username, "WATCH LOG");
+                            break;
+                        case 6:
+                            Visuals.ExportUserData(authService.CurrentUser, allMovies);
+                            break;
+                        case 7:
+                            authService.Logout();
+                            break;
+                    }
                 }
             }
-            Console.WriteLine("\nPress any key to return...");
-            Console.ReadKey();
         }
 
-        static void HandleSearch(SearchService searchService)
+        static void HandleMovieFlow(Movie m, AuthenticationService auth, RatingService rs)
         {
-            Console.Clear();
-            Console.WriteLine("========== MOVIE SEARCH ==========\n");
-            Console.Write("Search by Title, Genre, or Year: ");
-            var text = Console.ReadLine() ?? "";
-
-            var results = searchService.SearchByTitle(text);
-
-            if (results == null || results.Count == 0)
+            Visuals.BatteryLoading($"CHARGING {m.Title}");
+            Visuals.Header(auth.CurrentUser.Username);
+            string r = Visuals.GetInputBox($"Rate {m.Title} (1-5)");
+            if (int.TryParse(r, out int s) && s >= 1 && s <= 5)
             {
-                ShowError("No matches found.");
+                rs.AddRating(auth.CurrentUser.Username, m.Id, s);
+                if (!auth.CurrentUser.WatchHistory.Contains(m.Id)) auth.CurrentUser.WatchHistory.Add(m.Id);
+                auth.SaveUsers();
+                Visuals.TheaterAnimation();
+                Visuals.DisplayDigitalTicket(m, s, auth.CurrentUser.Username);
             }
-            else
-            {
-                foreach (var m in results)
-                    Console.WriteLine($"🎬 {m.Title} | {m.Genre} ({m.ReleaseYear})");
-                Console.WriteLine($"\nFound {results.Count} result(s).");
-            }
-            Console.ReadKey();
         }
 
-        static void DisplayHistory(AuthenticationService auth, MovieService movieService)
+        static List<Movie> Generate50Movies()
         {
-            Console.Clear();
-            Console.WriteLine("========== WATCH HISTORY ==========\n");
-            var history = auth.CurrentUser?.WatchHistory;
-            if (history == null || history.Count == 0)
+            var list = new List<Movie>();
+            string[] genres = { "Action", "Sci-Fi", "Drama", "Animation", "Crime", "Comedy" };
+            for (int i = 1; i <= 50; i++) list.Add(new Movie { Id = i, Title = "Cinema Hero " + i, Genre = genres[i % 6], ReleaseYear = 2000 + (i % 25), Rating = 4.0 });
+            return list;
+        }
+    }
+
+    public static class Visuals
+    {
+        public static void Setup()
+        {
+            Console.OutputEncoding = Encoding.UTF8;
+            try
             {
-                Console.WriteLine("Your history is empty. Start rating movies!");
+                Console.SetBufferSize(140, 1000);
+                Console.SetWindowSize(Math.Min(140, Console.LargestWindowWidth), Math.Min(45, Console.LargestWindowHeight));
             }
-            else
-            {
-                foreach (var id in history)
-                {
-                    var movie = movieService.GetAllMovies()?.FirstOrDefault(m => m.Id == id);
-                    Console.WriteLine($"- {(movie != null ? movie.Title : "Unknown Movie")}");
-                }
-            }
-            Console.WriteLine("\nPress any key to return...");
-            Console.ReadKey();
+            catch { }
         }
 
-        static void ShowError(string msg)
+        public static void PlayIntroSound() { try { Console.Beep(200, 300); Thread.Sleep(50); Console.Beep(400, 500); } catch { } }
+
+        public static void DrawSystemBorder()
         {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"\n[✘] {msg}");
+            int w = Console.WindowWidth; int h = Console.WindowHeight;
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.SetCursorPosition(0, 0); Console.Write("┏" + new string('━', w - 3) + "┓");
+            for (int i = 1; i < h - 1; i++)
+            {
+                Console.SetCursorPosition(0, i);
+                Console.Write(i % 2 == 0 ? "┃ █" : "┃  ");
+                Console.SetCursorPosition(w - 3, i);
+                Console.Write(i % 2 == 0 ? "█ ┃" : "  ┃");
+            }
+            Console.SetCursorPosition(0, h - 1); Console.Write("┗" + new string('━', w - 3) + "┛");
             Console.ResetColor();
-            System.Threading.Thread.Sleep(1000);
+        }
+
+        // --- دالة التوسيط الكلية المصلحة (تعيد إظهار العنوان) ---
+        public static int ShowFullCenteredGateway(string[] opts)
+        {
+            int sel = 0; ConsoleKey key;
+            string[] logo = {
+                @"███╗   ███╗ ██████╗ ██╗   ██╗██╗███████╗     █████╗ ██╗",
+                @"████╗ ████║██╔═══██╗██║   ██║██║██╔════╝    ██╔══██╗██║",
+                @"██╔████╔██║██║   ██║██║   ██║██║█████╗      ███████║██║",
+                @"██║╚██╔╝██║██║   ██║╚██╗ ██╔╝██║██╔══╝      ██╔══██║██║",
+                @"██║ ╚═╝ ██║╚██████╔╝ ╚████╔╝ ██║███████╗    ██║  ██║██║",
+                @"╚═╝     ╚═╝ ╚═════╝   ╚═══╝  ╚═╝╚══════╝    ╚═╝  ╚═╝╚═╝"
+            };
+            do
+            {
+                Console.Clear(); DrawSystemBorder();
+                int w = Console.WindowWidth; int h = Console.WindowHeight;
+
+                // حساب الطول الإجمالي للمحتوى (اللوجو + الخيارات + فراغات)
+                int totalHeight = logo.Length + opts.Length + 4;
+                int startY = (h / 2) - (totalHeight / 2);
+
+                // 1. رسم اللوجو الممركز
+                Console.ForegroundColor = ConsoleColor.Red;
+                for (int i = 0; i < logo.Length; i++)
+                {
+                    Console.SetCursorPosition((w / 2) - (logo[i].Length / 2), startY + i);
+                    Console.WriteLine(logo[i]);
+                }
+
+                // 2. رسم الخيارات الممركزة تحت اللوجو
+                for (int i = 0; i < opts.Length; i++)
+                {
+                    int x = (w / 2) - (opts[i].Length / 2) - 5;
+                    Console.SetCursorPosition(x, startY + logo.Length + 2 + i);
+                    if (i == sel)
+                    {
+                        Console.BackgroundColor = ConsoleColor.Red; Console.ForegroundColor = ConsoleColor.White;
+                        Console.WriteLine($" ► {opts[i]} ");
+                    }
+                    else
+                    {
+                        Console.BackgroundColor = ConsoleColor.Black; Console.ForegroundColor = ConsoleColor.DarkRed;
+                        Console.WriteLine($"   {opts[i]}   ");
+                    }
+                    Console.ResetColor();
+                }
+                key = Console.ReadKey(true).Key;
+                if (key == ConsoleKey.UpArrow) sel = (sel == 0) ? opts.Length - 1 : sel - 1;
+                else if (key == ConsoleKey.DownArrow) sel = (sel == opts.Length - 1) ? 0 : sel + 1;
+            } while (key != ConsoleKey.Enter);
+            return sel;
+        }
+
+        public static void Header(string user = null, string personality = "")
+        {
+            Console.Clear(); DrawSystemBorder();
+            Console.ForegroundColor = ConsoleColor.Red;
+            string t = "--- MOVIE AI SYSTEM ---";
+            Console.SetCursorPosition((Console.WindowWidth / 2) - (t.Length / 2), 2);
+            Console.WriteLine(t);
+            if (user != null)
+            {
+                string st = $" [ VIEWER: {user.ToUpper()} | RANK: {personality} ] ";
+                Console.SetCursorPosition((Console.WindowWidth / 2) - (st.Length / 2), 4);
+                Console.ForegroundColor = ConsoleColor.Yellow; Console.Write(st);
+            }
+        }
+
+        public static Movie ShowMovieGrid(List<Movie> list, string user, string title = "EXPLORE")
+        {
+            int sel = 0, cols = 3; ConsoleKey key;
+            if (list == null || list.Count == 0) return null;
+            do
+            {
+                Header(user);
+                int start = (sel / 9) * 9;
+                for (int i = start; i < Math.Min(start + 9, list.Count); i++)
+                {
+                    int r = (i - start) / cols, c = i % cols;
+                    int x = 12 + (c * 40), y = 7 + (r * 7);
+                    Console.SetCursorPosition(x, y);
+                    Console.ForegroundColor = (i == sel) ? ConsoleColor.Yellow : ConsoleColor.DarkGray;
+                    Console.Write("┏" + new string('━', 30) + "┓");
+                    Console.SetCursorPosition(x, y + 1); Console.Write($"┃ {list[i].Title.PadRight(28).Substring(0, 28)} ┃");
+                    Console.SetCursorPosition(x, y + 2); Console.Write($"┃ Rating: {list[i].Rating}/5".PadRight(29) + "┃");
+                    Console.SetCursorPosition(x, y + 3); Console.Write($"┃ {list[i].Genre.PadRight(28).Substring(0, 28)} ┃");
+                    Console.SetCursorPosition(x, y + 4); Console.Write("┗" + new string('━', 30) + "┛");
+                }
+                key = Console.ReadKey(true).Key;
+                if (key == ConsoleKey.RightArrow && sel < list.Count - 1) sel++;
+                else if (key == ConsoleKey.LeftArrow && sel > 0) sel--;
+                else if (key == ConsoleKey.DownArrow && sel + cols < list.Count) sel += cols;
+                else if (key == ConsoleKey.UpArrow && sel - cols >= 0) sel -= cols;
+                else if (key == ConsoleKey.Escape) return null;
+            } while (key != ConsoleKey.Enter);
+            return list[sel];
+        }
+
+        public static void BatteryLoading(string msg)
+        {
+            Console.Clear(); DrawSystemBorder();
+            int x = (Console.WindowWidth / 2) - 15; int y = (Console.WindowHeight / 2) - 2;
+            for (int i = 0; i <= 100; i += 20)
+            {
+                Console.SetCursorPosition(x, y); Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write($"{msg}... {i}%");
+                Console.SetCursorPosition(x, y + 2); Console.ForegroundColor = ConsoleColor.White;
+                Console.Write("┏━━━━━━━━━━━━━━━━━━━━┓ █");
+                Console.SetCursorPosition(x + 1, y + 2);
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write(new string('█', i / 5)); Thread.Sleep(150);
+            }
+        }
+
+        public static int ShowMenu(string title, string[] opts, string user = null, string personality = "")
+        {
+            int sel = 0; ConsoleKey key;
+            do
+            {
+                Header(user, personality);
+                Console.SetCursorPosition((Console.WindowWidth / 2) - (title.Length / 2), 7);
+                Console.ForegroundColor = ConsoleColor.Cyan; Console.WriteLine($"--- {title} ---");
+                for (int i = 0; i < opts.Length; i++)
+                {
+                    int p = (Console.WindowWidth / 2) - (opts[i].Length / 2) - 5;
+                    Console.SetCursorPosition(Math.Max(0, p), 9 + i);
+                    if (i == sel) { Console.BackgroundColor = ConsoleColor.Red; Console.ForegroundColor = ConsoleColor.White; Console.WriteLine($" ► {opts[i].ToUpper()} "); }
+                    else { Console.BackgroundColor = ConsoleColor.Black; Console.ForegroundColor = ConsoleColor.DarkRed; Console.WriteLine($"   {opts[i]}   "); }
+                    Console.ResetColor();
+                }
+                key = Console.ReadKey(true).Key;
+                if (key == ConsoleKey.UpArrow) sel = (sel == 0) ? opts.Length - 1 : sel - 1;
+                else if (key == ConsoleKey.DownArrow) sel = (sel == opts.Length - 1) ? 0 : sel + 1;
+            } while (key != ConsoleKey.Enter);
+            return sel;
+        }
+
+        public static string GetInputBox(string prompt, bool isP = false)
+        {
+            int w = 44; int x = (Console.WindowWidth / 2) - (w / 2);
+            Console.SetCursorPosition(x, 15); Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("╔" + new string('═', w - 2) + "╗");
+            Console.SetCursorPosition(x, 16); Console.WriteLine($"║ {prompt.PadRight(w - 4)} ║");
+            Console.SetCursorPosition(x, 17); Console.Write("║ > ");
+            Console.ForegroundColor = ConsoleColor.White;
+            string input = isP ? ReadPass() : Console.ReadLine();
+            Console.SetCursorPosition(x, 18); Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("╚" + new string('═', w - 2) + "╝");
+            return input;
+        }
+        private static string ReadPass() { string p = ""; while (true) { var k = Console.ReadKey(true); if (k.Key == ConsoleKey.Enter) break; if (k.Key == ConsoleKey.Backspace && p.Length > 0) { p = p.Substring(0, p.Length - 1); Console.Write("\b \b"); } else if (!char.IsControl(k.KeyChar)) { p += k.KeyChar; Console.Write("*"); } } Console.WriteLine(); return p; }
+
+        public static void TheaterAnimation()
+        {
+            int w = Console.WindowWidth;
+            for (int i = 0; i < w / 2; i += 8)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                for (int j = 0; j < Console.WindowHeight; j++) { Console.SetCursorPosition(i, j); Console.Write("████"); Console.SetCursorPosition(Math.Max(0, w - i - 4), j); Console.Write("████"); }
+                Thread.Sleep(30);
+            }
+            Console.Clear();
+        }
+
+        public static void DisplayDigitalTicket(Movie m, int r, string u)
+        {
+            Header(u);
+            int x = (Console.WindowWidth / 2) - 25;
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.SetCursorPosition(x, 10); Console.WriteLine("┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓");
+            Console.SetCursorPosition(x, 11); Console.WriteLine($"┃ MOVIE : {m.Title.PadRight(40)} ┃");
+            Console.SetCursorPosition(x, 12); Console.WriteLine($"┃ RATING: {new string('★', r).PadRight(40)} ┃");
+            Console.SetCursorPosition(x, 13); Console.WriteLine("┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛");
+            Console.ReadKey();
+        }
+
+        public static Movie ShowSurpriseWheel(List<Movie> m, string u)
+        {
+            Random r = new Random(); Movie pick = m[r.Next(m.Count)];
+            Header(u);
+            Console.SetCursorPosition((Console.WindowWidth / 2) - 10, 15);
+            Console.ForegroundColor = ConsoleColor.Magenta; Console.WriteLine(">> SPINNING... <<");
+            Thread.Sleep(1000); return pick;
+        }
+
+        public static string AnalyzeViewerPersonality(User u, List<Movie> m) { return "Cinema Critic"; }
+        public static void ExportUserData(User u, List<Movie> m) { ShowMessage("Report Exported!", ConsoleColor.Green); }
+        public static void ShowMessage(string m, ConsoleColor c) { Console.ForegroundColor = c; Console.WriteLine("\n >> " + m); Thread.Sleep(1200); }
+        public static void ShowProgressBar(string msg)
+        {
+            Console.WriteLine(); int x = (Console.WindowWidth / 2) - 15;
+            Console.SetCursorPosition(x, Console.CursorTop);
+            Console.ForegroundColor = ConsoleColor.Red; Console.Write(msg + " [");
+            for (int i = 0; i < 10; i++) { Console.Write("■"); Thread.Sleep(80); }
+            Console.WriteLine("] DONE");
         }
     }
 }
