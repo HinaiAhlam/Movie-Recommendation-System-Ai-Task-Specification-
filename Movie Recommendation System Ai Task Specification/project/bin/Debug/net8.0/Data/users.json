@@ -100,11 +100,13 @@
   {
     "FavoriteGenres": [
       "Action",
-      "Fantasy"
+      "Fantasy",
+      "Sci-Fi"
     ],
     "WatchHistory": [
       3,
-      4
+      4,
+      2
     ],
     "Ratings": [],
     "Id": 12,
@@ -142,5 +144,25 @@
     "Id": 16,
     "Username": "ss",
     "Password": "33"
+  },
+  {
+    "FavoriteGenres": [
+      "Romance"
+    ],
+    "WatchHistory": [
+      5
+    ],
+    "Ratings": [],
+    "Id": 17,
+    "Username": "Ebtesam",
+    "Password": "90"
+  },
+  {
+    "FavoriteGenres": [],
+    "WatchHistory": [],
+    "Ratings": [],
+    "Id": 18,
+    "Username": "abc",
+    "Password": "123"
   }
 ]
