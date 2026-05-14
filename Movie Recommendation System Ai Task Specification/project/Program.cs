@@ -31,7 +31,7 @@ namespace project
             {
                 if (authService.CurrentUser == null)
                 {
-                    // المرحلة 1: شاشة الدخول (اللوجو والخيارات ممركزة تماماً)
+                    // المرحلة 1: شاشة الدخول (اللوجو والخيارات ممركزة تماماً..)
                     int startChoice = Visuals.ShowFullCenteredGateway(new[] { "LOGIN SYSTEM", "REGISTER ACCOUNT", "EXIT" });
                     if (startChoice == 2) break;
 
