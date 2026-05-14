@@ -1,84 +1,84 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\",
+  "WorkspaceRootPath": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\ebtes\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\codeline\\onedrive\\desktop\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\ebtes\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\utilities\\validationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\codeline\\onedrive\\desktop\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\utilities\\validationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\utilities\\validationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\ebtes\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\utilities\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\codeline\\onedrive\\desktop\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\utilities\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\utilities\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ebtes\\Downloads\\movie_recommendation_system_c_console_ai_project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\ebtes\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\codeline\\onedrive\\desktop\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\services\\movieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\ebtes\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\services\\ratingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\codeline\\onedrive\\desktop\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\services\\ratingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\services\\ratingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\ebtes\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\services\\recommendationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\codeline\\onedrive\\desktop\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\services\\recommendationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\services\\recommendationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\ebtes\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\data\\ratings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\codeline\\onedrive\\desktop\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\data\\ratings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\data\\ratings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\ebtes\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\data\\movies.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\codeline\\onedrive\\desktop\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\data\\movies.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\data\\movies.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\ebtes\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\data\\users.josn||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\codeline\\onedrive\\desktop\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\data\\users.josn||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\data\\users.josn||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\ebtes\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\services\\contentbasedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\codeline\\onedrive\\desktop\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\services\\contentbasedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\services\\contentbasedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\ebtes\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\services\\collaborativefilteringservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\codeline\\onedrive\\desktop\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\services\\collaborativefilteringservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\services\\collaborativefilteringservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\ebtes\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\interface\\irecommendation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\codeline\\onedrive\\desktop\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\interface\\irecommendation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\interface\\irecommendation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\ebtes\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\services\\searchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\codeline\\onedrive\\desktop\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\services\\searchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\services\\searchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\ebtes\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\interface\\isearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\codeline\\onedrive\\desktop\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\interface\\isearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\interface\\isearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\ebtes\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\codeline\\onedrive\\desktop\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\ebtes\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\models\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\codeline\\onedrive\\desktop\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\models\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\models\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\ebtes\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\codeline\\onedrive\\desktop\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\ebtes\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\codeline\\onedrive\\desktop\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\ebtes\\downloads\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|c:\\users\\codeline\\onedrive\\desktop\\movie-recommendation-system-ai-task-specification-\\movie recommendation system ai task specification\\project\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A5AFDA7-98E5-90C4-3164-A14884667405}|project\\project.csproj|solutionrelative:project\\services\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -89,19 +89,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 570,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "ValidationHelper.cs",
-              "DocumentMoniker": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Utilities\\ValidationHelper.cs",
+              "DocumentMoniker": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Utilities\\ValidationHelper.cs",
               "RelativeDocumentMoniker": "project\\Utilities\\ValidationHelper.cs",
-              "ToolTip": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Utilities\\ValidationHelper.cs",
+              "ToolTip": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Utilities\\ValidationHelper.cs",
               "RelativeToolTip": "project\\Utilities\\ValidationHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -111,9 +107,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "FileManager.cs",
-              "DocumentMoniker": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Utilities\\FileManager.cs",
+              "DocumentMoniker": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Utilities\\FileManager.cs",
               "RelativeDocumentMoniker": "project\\Utilities\\FileManager.cs",
-              "ToolTip": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Utilities\\FileManager.cs",
+              "ToolTip": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Utilities\\FileManager.cs",
               "RelativeToolTip": "project\\Utilities\\FileManager.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAgwDUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -124,9 +120,9 @@
               "DocumentIndex": 3,
               "Title": "movie_recommendation_system_c_console_ai_project.cs",
               "DocumentMoniker": "C:\\Users\\ebtes\\Downloads\\movie_recommendation_system_c_console_ai_project.cs",
-              "RelativeDocumentMoniker": "..\\..\\movie_recommendation_system_c_console_ai_project.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\ebtes\\Downloads\\movie_recommendation_system_c_console_ai_project.cs",
               "ToolTip": "C:\\Users\\ebtes\\Downloads\\movie_recommendation_system_c_console_ai_project.cs",
-              "RelativeToolTip": "..\\..\\movie_recommendation_system_c_console_ai_project.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\ebtes\\Downloads\\movie_recommendation_system_c_console_ai_project.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-13T12:15:37.141Z"
@@ -135,9 +131,9 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "RecommendationService.cs",
-              "DocumentMoniker": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\RecommendationService.cs",
+              "DocumentMoniker": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\RecommendationService.cs",
               "RelativeDocumentMoniker": "project\\Services\\RecommendationService.cs",
-              "ToolTip": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\RecommendationService.cs",
+              "ToolTip": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\RecommendationService.cs",
               "RelativeToolTip": "project\\Services\\RecommendationService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -147,9 +143,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "RatingService.cs",
-              "DocumentMoniker": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\RatingService.cs",
+              "DocumentMoniker": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\RatingService.cs",
               "RelativeDocumentMoniker": "project\\Services\\RatingService.cs",
-              "ToolTip": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\RatingService.cs",
+              "ToolTip": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\RatingService.cs",
               "RelativeToolTip": "project\\Services\\RatingService.cs",
               "ViewState": "AgIAAEoAAAAAAAAAAAAAwGEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -159,9 +155,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "MovieService.cs",
-              "DocumentMoniker": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\MovieService.cs",
+              "DocumentMoniker": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\MovieService.cs",
               "RelativeDocumentMoniker": "project\\Services\\MovieService.cs",
-              "ToolTip": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\MovieService.cs",
+              "ToolTip": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\MovieService.cs",
               "RelativeToolTip": "project\\Services\\MovieService.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAQwCEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -171,11 +167,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Program.cs",
               "RelativeDocumentMoniker": "project\\Program.cs",
-              "ToolTip": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Program.cs",
+              "ToolTip": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Program.cs",
               "RelativeToolTip": "project\\Program.cs",
-              "ViewState": "AgIAAGkBAAAAAAAAAAAkwHEBAAABAAAAAAAAAA==",
+              "ViewState": "AgIAALAAAAAAAAAAAAAiwLwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-12T10:43:58.842Z",
               "EditorCaption": ""
@@ -184,9 +180,9 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "ratings.json",
-              "DocumentMoniker": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Data\\ratings.json",
+              "DocumentMoniker": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Data\\ratings.json",
               "RelativeDocumentMoniker": "project\\Data\\ratings.json",
-              "ToolTip": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Data\\ratings.json",
+              "ToolTip": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Data\\ratings.json",
               "RelativeToolTip": "project\\Data\\ratings.json",
               "ViewState": "AgIAAEkCAAAAAAAAAAArwFkCAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -196,9 +192,9 @@
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "users.josn",
-              "DocumentMoniker": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Data\\users.josn",
+              "DocumentMoniker": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Data\\users.josn",
               "RelativeDocumentMoniker": "project\\Data\\users.josn",
-              "ToolTip": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Data\\users.josn",
+              "ToolTip": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Data\\users.josn",
               "RelativeToolTip": "project\\Data\\users.josn",
               "ViewState": "AgIAAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
@@ -208,9 +204,9 @@
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "movies.json",
-              "DocumentMoniker": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Data\\movies.json",
+              "DocumentMoniker": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Data\\movies.json",
               "RelativeDocumentMoniker": "project\\Data\\movies.json",
-              "ToolTip": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Data\\movies.json",
+              "ToolTip": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Data\\movies.json",
               "RelativeToolTip": "project\\Data\\movies.json",
               "ViewState": "AgIAAAcCAAAAAAAAAAAkwBYCAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -220,9 +216,9 @@
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "ContentBasedService.cs",
-              "DocumentMoniker": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\ContentBasedService.cs",
+              "DocumentMoniker": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\ContentBasedService.cs",
               "RelativeDocumentMoniker": "project\\Services\\ContentBasedService.cs",
-              "ToolTip": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\ContentBasedService.cs",
+              "ToolTip": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\ContentBasedService.cs",
               "RelativeToolTip": "project\\Services\\ContentBasedService.cs",
               "ViewState": "AgIAADgAAAAAAAAAAAAIwEEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -232,9 +228,9 @@
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "CollaborativeFilteringService.cs",
-              "DocumentMoniker": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\CollaborativeFilteringService.cs",
+              "DocumentMoniker": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\CollaborativeFilteringService.cs",
               "RelativeDocumentMoniker": "project\\Services\\CollaborativeFilteringService.cs",
-              "ToolTip": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\CollaborativeFilteringService.cs",
+              "ToolTip": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\CollaborativeFilteringService.cs",
               "RelativeToolTip": "project\\Services\\CollaborativeFilteringService.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAowCkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -244,9 +240,9 @@
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "IRecommendation.cs",
-              "DocumentMoniker": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Interface\\IRecommendation.cs",
+              "DocumentMoniker": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Interface\\IRecommendation.cs",
               "RelativeDocumentMoniker": "project\\Interface\\IRecommendation.cs",
-              "ToolTip": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Interface\\IRecommendation.cs",
+              "ToolTip": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Interface\\IRecommendation.cs",
               "RelativeToolTip": "project\\Interface\\IRecommendation.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -256,9 +252,9 @@
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "ISearch.cs",
-              "DocumentMoniker": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Interface\\ISearch.cs",
+              "DocumentMoniker": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Interface\\ISearch.cs",
               "RelativeDocumentMoniker": "project\\Interface\\ISearch.cs",
-              "ToolTip": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Interface\\ISearch.cs",
+              "ToolTip": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Interface\\ISearch.cs",
               "RelativeToolTip": "project\\Interface\\ISearch.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -268,9 +264,9 @@
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "SearchService.cs",
-              "DocumentMoniker": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\SearchService.cs",
+              "DocumentMoniker": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\SearchService.cs",
               "RelativeDocumentMoniker": "project\\Services\\SearchService.cs",
-              "ToolTip": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\SearchService.cs",
+              "ToolTip": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\SearchService.cs",
               "RelativeToolTip": "project\\Services\\SearchService.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAswCsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -280,9 +276,9 @@
               "$type": "Document",
               "DocumentIndex": 15,
               "Title": "Movie.cs",
-              "DocumentMoniker": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Models\\Movie.cs",
+              "DocumentMoniker": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Models\\Movie.cs",
               "RelativeDocumentMoniker": "project\\Models\\Movie.cs",
-              "ToolTip": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Models\\Movie.cs",
+              "ToolTip": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Models\\Movie.cs",
               "RelativeToolTip": "project\\Models\\Movie.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -292,9 +288,9 @@
               "$type": "Document",
               "DocumentIndex": 16,
               "Title": "Rating.cs",
-              "DocumentMoniker": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Models\\Rating.cs",
+              "DocumentMoniker": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Models\\Rating.cs",
               "RelativeDocumentMoniker": "project\\Models\\Rating.cs",
-              "ToolTip": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Models\\Rating.cs",
+              "ToolTip": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Models\\Rating.cs",
               "RelativeToolTip": "project\\Models\\Rating.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAxwAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -304,9 +300,9 @@
               "$type": "Document",
               "DocumentIndex": 17,
               "Title": "Person.cs",
-              "DocumentMoniker": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Models\\Person.cs",
+              "DocumentMoniker": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Models\\Person.cs",
               "RelativeDocumentMoniker": "project\\Models\\Person.cs",
-              "ToolTip": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Models\\Person.cs",
+              "ToolTip": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Models\\Person.cs",
               "RelativeToolTip": "project\\Models\\Person.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -316,9 +312,9 @@
               "$type": "Document",
               "DocumentIndex": 18,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Models\\User.cs",
+              "DocumentMoniker": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Models\\User.cs",
               "RelativeDocumentMoniker": "project\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Models\\User.cs",
               "RelativeToolTip": "project\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -328,9 +324,9 @@
               "$type": "Document",
               "DocumentIndex": 19,
               "Title": "AuthenticationService.cs",
-              "DocumentMoniker": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\AuthenticationService.cs",
+              "DocumentMoniker": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\AuthenticationService.cs",
               "RelativeDocumentMoniker": "project\\Services\\AuthenticationService.cs",
-              "ToolTip": "C:\\Users\\ebtes\\Downloads\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\AuthenticationService.cs",
+              "ToolTip": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\Services\\AuthenticationService.cs",
               "RelativeToolTip": "project\\Services\\AuthenticationService.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAkwEAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

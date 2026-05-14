@@ -187,7 +187,7 @@ namespace project
                 Console.Clear(); DrawSystemBorder();
                 int w = Console.WindowWidth; int h = Console.WindowHeight;
 
-                // حساب الطول الإجمالي للمحتوى (اللوجو + الخيارات + فراغات)
+                // ..حساب الطول الإجمالي للمحتوى (اللوجو + الخيارات + فراغات)
                 int totalHeight = logo.Length + opts.Length + 4;
                 int startY = (h / 2) - (totalHeight / 2);
 
