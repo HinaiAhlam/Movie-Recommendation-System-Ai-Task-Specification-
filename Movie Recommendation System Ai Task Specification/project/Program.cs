@@ -170,7 +170,7 @@ namespace project
             Console.ResetColor();
         }
 
-        // --- دالة التوسيط الكلية المصلحة (تعيد إظهار العنوان) ---
+        // --- دالة التوسيط الكلية المصلحة (تعيد إظهار العنوان) ----
         public static int ShowFullCenteredGateway(string[] opts)
         {
             int sel = 0; ConsoleKey key;

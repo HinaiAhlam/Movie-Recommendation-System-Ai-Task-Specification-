@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "YT/Zt5xEN5Y=",
+  "dgSpecHash": "pUO9YU3Lpg0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\CodeLine\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\project.csproj",
+  "projectFilePath": "C:\\Users\\mozam\\OneDrive\\Desktop\\Movie-Recommendation-System-Ai-Task-Specification-\\Movie Recommendation System Ai Task Specification\\project\\project.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\CodeLine\\.nuget\\packages\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512"
+    "C:\\Users\\mozam\\.nuget\\packages\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512",
+    "C:\\Users\\mozam\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.27\\microsoft.windowsdesktop.app.ref.8.0.27.nupkg.sha512",
+    "C:\\Users\\mozam\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.27\\microsoft.netcore.app.ref.8.0.27.nupkg.sha512",
+    "C:\\Users\\mozam\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.27\\microsoft.aspnetcore.app.ref.8.0.27.nupkg.sha512",
+    "C:\\Users\\mozam\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.27\\microsoft.netcore.app.host.win-x64.8.0.27.nupkg.sha512"
   ],
   "logs": []
 }
