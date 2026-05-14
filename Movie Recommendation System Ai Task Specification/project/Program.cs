@@ -191,7 +191,7 @@ namespace project
                 int totalHeight = logo.Length + opts.Length + 4;
                 int startY = (h / 2) - (totalHeight / 2);
 
-                // 1. رسم اللوجو الممركز
+                //  1.. رسم اللوجو الممركز
                 Console.ForegroundColor = ConsoleColor.Red;
                 for (int i = 0; i < logo.Length; i++)
                 {
